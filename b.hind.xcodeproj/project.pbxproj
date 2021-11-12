@@ -21,6 +21,7 @@
 		E5DD6348273C592900505CA4 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		E5DD634A273C592C00505CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 				E5DD6344273C592900505CA4 /* AppDelegate.swift */,
 				E5DD6348273C592900505CA4 /* Experience.rcproject */,
 				E5DD634A273C592C00505CA4 /* Assets.xcassets */,
+				E50E3019273EEA9E00CFEC91 /* Info.plist */,
 				E5DD634C273C592C00505CA4 /* Preview Content */,
 			);
 			path = b.hind;
@@ -291,6 +293,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"b.hind/Preview Content\"";
 				DEVELOPMENT_TEAM = H7R4J57657;
 				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = b.hind/Info.plist;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,6 +325,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"b.hind/Preview Content\"";
 				DEVELOPMENT_TEAM = H7R4J57657;
 				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = b.hind/Info.plist;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
