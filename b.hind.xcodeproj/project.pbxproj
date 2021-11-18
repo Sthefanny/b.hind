@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E5DD6345273C592900505CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DD6344273C592900505CA4 /* AppDelegate.swift */; };
+		E5C207B9273EF11B00D769C0 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5C207B8273EF11B00D769C0 /* Monster.usdz */; };
+		E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */; };
+		E5C207BD273EF79200D769C0 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BC273EF79200D769C0 /* CustomARView.swift */; };
+		E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5D0FC6F2746D4A300EA7D5D /* growl.mp3 */; };
+		E5DD6345273C592900505CA4 /* bhindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DD6344273C592900505CA4 /* bhindApp.swift */; };
 		E5DD6347273C592900505CA4 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DD6346273C592900505CA4 /* MonsterView.swift */; };
 		E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E5DD6348273C592900505CA4 /* Experience.rcproject */; };
 		E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DD634A273C592C00505CA4 /* Assets.xcassets */; };
@@ -15,13 +19,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C207B8273EF11B00D769C0 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Monster.usdz; path = "../../../AR Studies/jonathan-apple-object-capture/source/Monster.usdz"; sourceTree = "<group>"; };
+		E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
+		E5C207BC273EF79200D769C0 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		E5D0FC6F2746D4A300EA7D5D /* growl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = growl.mp3; sourceTree = "<group>"; };
 		E5DD6341273C592900505CA4 /* b.hind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = b.hind.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5DD6344273C592900505CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E5DD6344273C592900505CA4 /* bhindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bhindApp.swift; sourceTree = "<group>"; };
 		E5DD6346273C592900505CA4 /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
 		E5DD6348273C592900505CA4 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		E5DD634A273C592C00505CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +55,26 @@
 			isa = PBXGroup;
 			children = (
 				E5DD6346273C592900505CA4 /* MonsterView.swift */,
+				E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */,
+				E5C207BC273EF79200D769C0 /* CustomARView.swift */,
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		E5C207B7273EF0D800D769C0 /* 3D Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E5C207B8273EF11B00D769C0 /* Monster.usdz */,
+			);
+			path = "3D Assets";
+			sourceTree = "<group>";
+		};
+		E5D0FC6C2746CF2700EA7D5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E5D0FC6F2746D4A300EA7D5D /* growl.mp3 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E5DD6338273C592900505CA4 = {
@@ -71,10 +97,12 @@
 			isa = PBXGroup;
 			children = (
 				E5269BEA273D9C4B007D0837 /* View */,
-				E5DD6344273C592900505CA4 /* AppDelegate.swift */,
+				E5DD6344273C592900505CA4 /* bhindApp.swift */,
 				E5DD6348273C592900505CA4 /* Experience.rcproject */,
 				E5DD634A273C592C00505CA4 /* Assets.xcassets */,
 				E50E3019273EEA9E00CFEC91 /* Info.plist */,
+				E5C207B7273EF0D800D769C0 /* 3D Assets */,
+				E5D0FC6C2746CF2700EA7D5D /* Resources */,
 				E5DD634C273C592C00505CA4 /* Preview Content */,
 			);
 			path = b.hind;
@@ -147,6 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
+				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
+				E5C207B9273EF11B00D769C0 /* Monster.usdz in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,8 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C207BD273EF79200D769C0 /* CustomARView.swift in Sources */,
 				E5DD6347273C592900505CA4 /* MonsterView.swift in Sources */,
-				E5DD6345273C592900505CA4 /* AppDelegate.swift in Sources */,
+				E5DD6345273C592900505CA4 /* bhindApp.swift in Sources */,
+				E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */,
 				E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +325,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"b.hind/Preview Content\"";
 				DEVELOPMENT_TEAM = H7R4J57657;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = b.hind/Info.plist;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = b.hind/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,8 +357,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"b.hind/Preview Content\"";
 				DEVELOPMENT_TEAM = H7R4J57657;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = b.hind/Info.plist;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = b.hind/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
