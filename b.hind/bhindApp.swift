@@ -11,7 +11,7 @@ import SwiftUI
 struct bhindApp: App {
     var body: some Scene {
         WindowGroup {
-            MonsterView()
+            HomeView()
         }
     }
 }
