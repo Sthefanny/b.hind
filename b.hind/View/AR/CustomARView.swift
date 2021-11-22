@@ -40,7 +40,7 @@ extension CustomARView: ARCoachingOverlayViewDelegate {
         
 //        addCoaching()
         
-        session.run(config)
+        session.run(config, options: [.resetTracking, .removeExistingAnchors])
     }
     
     /// From: https://developer.apple.com/forums/thread/122229

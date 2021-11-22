@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae18cba9-95cd-4ed4-b53c-9cce34aa4c2c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/ar_bg@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/ar_bg@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/ar_bg@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/ar_full_life@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/ar_full_life@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/ar_full_life@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/ar_leave_button@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/ar_leave_button@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/ar_leave_button@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/ar_left@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/ar_left@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/ar_left@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/ar_power_button@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/ar_power_button@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/ar_power_button@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/ar_right@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/ar_right@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/ar_right@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/ar_top@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/ar_top@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/ar_top@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/View/Home/HomeView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.hind.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.hind/View/AR/ARViewRepresentable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/View/AR/ARViewRepresentable.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.hind/View/AR/CustomARView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/View/AR/CustomARView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.hind/View/AR/MonsterView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/View/AR/MonsterView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.hind/bhindApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/bhindApp.swift" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_C566C67D-6ECB-422B-B703-52796091EA72" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="21BafU0b4W5YOIJtmc8Ox5pFdMh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="b.hind" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RunManager">
+    <configuration name="b.hind" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="b.hind" TARGET_NAME="b.hind" CONFIG_NAME="Debug" SCHEME_NAME="b.hind" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="b.hind" RUN_TARGET_NAME="b.hind" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae18cba9-95cd-4ed4-b53c-9cce34aa4c2c" name="Changes" comment="" />
+      <created>1637417042488</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637417042488</updated>
+      <workItem from="1637417052177" duration="70000" />
+      <workItem from="1637417142273" duration="1470000" />
+      <workItem from="1637581391840" duration="909000" />
+      <workItem from="1637583308114" duration="1136000" />
+      <workItem from="1637589094040" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
