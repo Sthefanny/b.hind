@@ -18,7 +18,7 @@ var monsterTimer: Timer? = nil
 
 struct MonsterView : View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var arDelegate = ARDelegate()
+//    @ObservedObject var arDelegate = ARDelegate()
     @State private var animationAmount = 2.0
     @State private var active = true
     //    UIViewControllerRepresentable
@@ -27,15 +27,15 @@ struct MonsterView : View {
     
     var body: some View {
         return ZStack {
-            ARViewRepresentable(arDelegate: arDelegate)
-            VStack {
-                Spacer()
-                Text(arDelegate.message)
-                    .foregroundColor(Color.primary)
-                    .frame(maxWidth: .infinity)
-                    .padding(.bottom, 20)
-                    .background(Color.secondary)
-            }
+//            ARViewRepresentable(arDelegate: arDelegate)
+//            VStack {
+//                Spacer()
+//                Text(arDelegate.message)
+//                    .foregroundColor(Color.primary)
+//                    .frame(maxWidth: .infinity)
+//                    .padding(.bottom, 20)
+//                    .background(Color.secondary)
+//            }
             
             GeometryReader { geo in
                 Image("ar_bg")
@@ -70,16 +70,16 @@ struct MonsterView : View {
                     
                     Spacer()
                     
-                    Text(arDelegate.message)
-                        .foregroundColor(.red)
-                        .foregroundColor(Color.primary)
-                        .background(Color.secondary)
-                        .frame(width: geo.size.width * 0.3, alignment: .center)
+//                    Text(arDelegate.message)
+//                        .foregroundColor(.red)
+//                        .foregroundColor(Color.primary)
+//                        .background(Color.secondary)
+//                        .frame(width: geo.size.width * 0.3, alignment: .center)
                     
                     Button(action: {
                         print("ar_power_button")
 //                        ARViewContainer().chekIfSpellHitMonster()
-                        arDelegate.castSpell()
+//                        arDelegate.castSpell()
                         animationAmount = 1
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                             animationAmount = 2
