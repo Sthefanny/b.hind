@@ -12,10 +12,12 @@ struct AcceptCallButtomView: View {
         Button {
             print("Call accepted")
         } label: {
+            NavigationLink(destination: CallView()) {
             Image("yes")
                 .frame(width: 78, height: 78, alignment: .center)
                 .background(Color(#colorLiteral(red: 0.348320365, green: 0.6083550453, blue: 0.5911906362, alpha: 1)))
                 .clipShape(Circle())
+            }
         }
         .padding(20)
     }

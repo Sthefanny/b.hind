@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct PreviewCallView: View {
+struct CallView: View {
     
     var body: some View {
         ZStack (alignment: .center) {
@@ -59,6 +59,7 @@ struct PreviewCallView: View {
 
         }
         .background(Color(.black))
+        .navigationBarBackButtonHidden(true)
         //main Zstack
     }
 }
@@ -66,7 +67,7 @@ struct PreviewCallView: View {
 
 struct PreviewCallView_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewCallView()
+        CallView()
 //.previewInterfaceOrientation(.portrait)
 //            .previewLayout(.device)
 //            .previewInterfaceOrientation(.portrait)

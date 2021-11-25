@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct Calling: View {
+struct CallingView: View {
+    
     var body: some View {
+        
         ZStack (alignment: .center) {
+            
             Image("call_bg")
                 .resizable()
                 .ignoresSafeArea()
@@ -20,11 +23,13 @@ struct Calling: View {
                 VStack{
                     Image("misty")
                         .frame(width: 141, height: 141, alignment: .center)
+                        .padding(.top)
+                        .padding(.top)
      
                     Text("Unkown Caller")
                         .foregroundColor(.white)
                         .font(.system(size: 34, weight: .regular))
-                        .padding()
+                        .padding(30)
                 }
                 .padding(.top)
                 .padding(.top)
@@ -42,11 +47,12 @@ struct Calling: View {
             }
             
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct Calling_Previews: PreviewProvider {
     static var previews: some View {
-        Calling()
+        CallingView()
     }
 }
