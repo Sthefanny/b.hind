@@ -2,40 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae18cba9-95cd-4ed4-b53c-9cce34aa4c2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/ar_bg@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/ar_bg@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_bg.imageset/ar_bg@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/ar_full_life@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/ar_full_life@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_full_life.imageset/ar_full_life@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/ar_leave_button@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/ar_leave_button@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_leave_button.imageset/ar_leave_button@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/ar_left@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/ar_left@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_left.imageset/ar_left@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/ar_power_button@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/ar_power_button@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_power_button.imageset/ar_power_button@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/ar_right@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/ar_right@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_right.imageset/ar_right@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/ar_top@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/ar_top@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/Assets.xcassets/ar_top.imageset/ar_top@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.hind/View/Home/HomeView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b.hind/View/AR/ARAudioPlayer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xcode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/b.hind.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.hind/View/AR/ARDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/View/AR/ARDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/b.hind/View/AR/ARViewRepresentable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/View/AR/ARViewRepresentable.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/b.hind/View/AR/CustomARView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/View/AR/CustomARView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/b.hind/View/AR/MonsterView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/View/AR/MonsterView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b.hind/bhindApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/b.hind/bhindApp.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +60,7 @@
       <workItem from="1637581391840" duration="909000" />
       <workItem from="1637583308114" duration="1136000" />
       <workItem from="1637589094040" duration="17000" />
+      <workItem from="1637857623848" duration="324000" />
     </task>
     <servers />
   </component>

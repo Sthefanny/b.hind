@@ -18,7 +18,7 @@ var monsterTimer: Timer? = nil
 
 struct MonsterView : View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-//    @ObservedObject var arDelegate = ARDelegate()
+    @ObservedObject var arDelegate = ARDelegate()
     @State private var animationAmount = 2.0
     @State private var active = true
     //    UIViewControllerRepresentable
@@ -27,7 +27,7 @@ struct MonsterView : View {
     
     var body: some View {
         return ZStack {
-//            ARViewRepresentable(arDelegate: arDelegate)
+            ARViewRepresentable(arDelegate: arDelegate)
 //            VStack {
 //                Spacer()
 //                Text(arDelegate.message)
@@ -59,7 +59,7 @@ struct MonsterView : View {
                 VStack {
                     Button(action: {
                         print("ar_leave_button")
-//                        ARViewContainer().exit()
+                        arDelegate.exit()
                         self.mode.wrappedValue.dismiss()
                     }) {
                         Image("ar_leave_button")
@@ -70,16 +70,16 @@ struct MonsterView : View {
                     
                     Spacer()
                     
-//                    Text(arDelegate.message)
-//                        .foregroundColor(.red)
-//                        .foregroundColor(Color.primary)
-//                        .background(Color.secondary)
-//                        .frame(width: geo.size.width * 0.3, alignment: .center)
+                    Text(arDelegate.message)
+                        .foregroundColor(.red)
+                        .foregroundColor(Color.primary)
+                        .background(Color.secondary)
+                        .frame(width: geo.size.width * 0.3, alignment: .center)
                     
                     Button(action: {
                         print("ar_power_button")
 //                        ARViewContainer().chekIfSpellHitMonster()
-//                        arDelegate.castSpell()
+                        arDelegate.castSpell()
                         animationAmount = 1
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                             animationAmount = 2
