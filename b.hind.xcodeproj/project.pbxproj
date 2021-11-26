@@ -20,6 +20,9 @@
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
 		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
+		E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */; };
+		E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */; };
+		E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */; };
 		E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */; };
 		E5C207BD273EF79200D769C0 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BC273EF79200D769C0 /* CustomARView.swift */; };
 		E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5D0FC6F2746D4A300EA7D5D /* growl.mp3 */; };
@@ -48,6 +51,9 @@
 		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
 		E554617E274EA35A000FFDA6 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
+		E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpecialElite-Regular.ttf"; sourceTree = "<group>"; };
 		E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		E5C207BC273EF79200D769C0 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		E5D0FC6F2746D4A300EA7D5D /* growl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = growl.mp3; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 		03192A11274EBF8D0002BFFE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */,
+				E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */,
+				E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */,
 				03192A12274EBFA80002BFFE /* JosefinSans-Bold.ttf */,
 				03192A14274EBFB80002BFFE /* JosefinSans-Regular.ttf */,
 			);
@@ -262,7 +271,10 @@
 				E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */,
 				03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
+				E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */,
+				E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */,
 				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
+				E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
 				03192A13274EBFAA0002BFFE /* JosefinSans-Bold.ttf in Resources */,
 			);

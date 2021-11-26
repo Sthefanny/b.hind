@@ -8,6 +8,9 @@
 	<array>
 		<string>JosefinSans-Bold.ttf</string>
 		<string>JosefinSans-Regular.ttf</string>
+		<string>JosefinSans-Medium.ttf</string>
+		<string>JosefinSans-SemiBold.ttf</string>
+		<string>SpecialElite-Regular.ttf</string>
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
