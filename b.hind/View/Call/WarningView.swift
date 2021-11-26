@@ -26,8 +26,7 @@ struct WarningView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
                         .font(.custom("JosefinSans-Regular", size: 18))
-                    
-                    
+                
                     Spacer()
                     
                     Image("audio")
