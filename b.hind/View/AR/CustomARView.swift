@@ -12,6 +12,8 @@ class CustomARView: ARView {
     
     // MARK: - Properties
     
+    var arView: ARView? = nil
+    
     // MARK: - Lifecycle
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
@@ -21,6 +23,13 @@ class CustomARView: ARView {
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
         setupARView()
+    }
+    
+    public func exit() {
+        arView?.__stopAudioEngine()
+        arView?.scene.anchors.removeAll()
+        arView?.removeFromSuperview()
+        arView = nil
     }
 }
 

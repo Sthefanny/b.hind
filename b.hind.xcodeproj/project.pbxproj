@@ -17,6 +17,9 @@
 		03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03192A14274EBFB80002BFFE /* JosefinSans-Regular.ttf */; };
 		03312C22274C2B2A00C48573 /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03312C21274C2B2A00C48573 /* CallButtonView.swift */; };
 		3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */; };
+		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
+		E554617F274EA35A000FFDA6 /* GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* GeometryUtils.swift */; };
+		E577D506274C5040002400BE /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E577D505274C5040002400BE /* Monster.usdz */; };
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
 		E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */; };
 		E5C207BD273EF79200D769C0 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BC273EF79200D769C0 /* CustomARView.swift */; };
@@ -40,6 +43,9 @@
 		03312C21274C2B2A00C48573 /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
 		3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
+		E554617E274EA35A000FFDA6 /* GeometryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryUtils.swift; sourceTree = "<group>"; };
+		E577D505274C5040002400BE /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		E5C207BC273EF79200D769C0 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 				E5DD6346273C592900505CA4 /* MonsterView.swift */,
 				E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */,
 				E5C207BC273EF79200D769C0 /* CustomARView.swift */,
+				E554617C274EA2DD000FFDA6 /* ARDelegate.swift */,
+				E554617E274EA35A000FFDA6 /* GeometryUtils.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 		E5C207B7273EF0D800D769C0 /* 3D Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E577D505274C5040002400BE /* Monster.usdz */,
 			);
 			path = "3D Assets";
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 			files = (
 				03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
+				E577D506274C5040002400BE /* Monster.usdz in Resources */,
 				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
 				03192A13274EBFAA0002BFFE /* JosefinSans-Bold.ttf in Resources */,
@@ -261,6 +271,7 @@
 			files = (
 				E5C207BD273EF79200D769C0 /* CustomARView.swift in Sources */,
 				03147DC2274C4FD800AD51AD /* UselessButtonView.swift in Sources */,
+				E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */,
 				E5DD6347273C592900505CA4 /* MonsterView.swift in Sources */,
 				0312AAB62746CF0600E8805E /* CallView.swift in Sources */,
 				E5DD6345273C592900505CA4 /* bhindApp.swift in Sources */,
@@ -272,6 +283,7 @@
 				030B0834274D767900AB6F18 /* CallingView.swift in Sources */,
 				E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */,
 				E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */,
+				E554617F274EA35A000FFDA6 /* GeometryUtils.swift in Sources */,
 				E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */,
 				3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */,
 			);
