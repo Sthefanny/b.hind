@@ -11,12 +11,18 @@ struct CertificateOfAchievementView : View {
     var body: some View {
         return NavigationView {
             ZStack {
-//                Color.black.edgesIgnoringSafeArea(.all)
+                Color.black.edgesIgnoringSafeArea(.all)
                 
                 GeometryReader { geo in
                     
-                    Text("Certificate of Achievement")
-                        .padding(.top, 100)
+                    Image("ar_success_bg")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                    
+                    VStack {
+                        
+                    }
                 }
                 .edgesIgnoringSafeArea(.all)
             }
