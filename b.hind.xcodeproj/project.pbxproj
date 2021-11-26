@@ -18,9 +18,11 @@
 		03312C22274C2B2A00C48573 /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03312C21274C2B2A00C48573 /* CallButtonView.swift */; };
 		3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */; };
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
-		E554617F274EA35A000FFDA6 /* GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* GeometryUtils.swift */; };
-		E577D506274C5040002400BE /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E577D505274C5040002400BE /* Monster.usdz */; };
+		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
+		E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */; };
+		E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */; };
+		E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */; };
 		E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */; };
 		E5C207BD273EF79200D769C0 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BC273EF79200D769C0 /* CustomARView.swift */; };
 		E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5D0FC6F2746D4A300EA7D5D /* growl.mp3 */; };
@@ -29,6 +31,9 @@
 		E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E5DD6348273C592900505CA4 /* Experience.rcproject */; };
 		E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DD634A273C592C00505CA4 /* Assets.xcassets */; };
 		E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */; };
+		E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5E626B0275059D7001FDE96 /* Monster.usdz */; };
+		E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */; };
+		E5E626B52750652D001FDE96 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B42750652D001FDE96 /* FailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +49,11 @@
 		3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
-		E554617E274EA35A000FFDA6 /* GeometryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryUtils.swift; sourceTree = "<group>"; };
-		E577D505274C5040002400BE /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
+		E554617E274EA35A000FFDA6 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
+		E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpecialElite-Regular.ttf"; sourceTree = "<group>"; };
 		E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		E5C207BC273EF79200D769C0 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		E5D0FC6F2746D4A300EA7D5D /* growl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = growl.mp3; sourceTree = "<group>"; };
@@ -56,6 +63,9 @@
 		E5DD6348273C592900505CA4 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		E5DD634A273C592C00505CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5E626B0275059D7001FDE96 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
+		E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateOfAchievementView.swift; sourceTree = "<group>"; };
+		E5E626B42750652D001FDE96 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,9 @@
 		03192A11274EBF8D0002BFFE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */,
+				E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */,
+				E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */,
 				03192A12274EBFA80002BFFE /* JosefinSans-Bold.ttf */,
 				03192A14274EBFB80002BFFE /* JosefinSans-Regular.ttf */,
 			);
@@ -125,7 +138,9 @@
 				E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */,
 				E5C207BC273EF79200D769C0 /* CustomARView.swift */,
 				E554617C274EA2DD000FFDA6 /* ARDelegate.swift */,
-				E554617E274EA35A000FFDA6 /* GeometryUtils.swift */,
+				E554617E274EA35A000FFDA6 /* DistanceUtils.swift */,
+				E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */,
+				E5E626B42750652D001FDE96 /* FailView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -141,7 +156,7 @@
 		E5C207B7273EF0D800D769C0 /* 3D Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E577D505274C5040002400BE /* Monster.usdz */,
+				E5E626B0275059D7001FDE96 /* Monster.usdz */,
 			);
 			path = "3D Assets";
 			sourceTree = "<group>";
@@ -253,10 +268,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */,
 				03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
-				E577D506274C5040002400BE /* Monster.usdz in Resources */,
+				E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */,
+				E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */,
 				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
+				E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
 				03192A13274EBFAA0002BFFE /* JosefinSans-Bold.ttf in Resources */,
 			);
@@ -282,9 +300,11 @@
 				03147DC0274C49A100AD51AD /* EndCallbuttonView.swift in Sources */,
 				030B0834274D767900AB6F18 /* CallingView.swift in Sources */,
 				E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */,
+				E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */,
 				E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */,
-				E554617F274EA35A000FFDA6 /* GeometryUtils.swift in Sources */,
+				E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */,
 				E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */,
+				E5E626B52750652D001FDE96 /* FailView.swift in Sources */,
 				3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,11 +442,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = b.hind/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_CFBundleDisplayName = B.hind;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To use Augmented Reality, this app needs access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "armv7 arkit";
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,7 +461,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -454,11 +477,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = b.hind/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_CFBundleDisplayName = B.hind;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To use Augmented Reality, this app needs access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "armv7 arkit";
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
