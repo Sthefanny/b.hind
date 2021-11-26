@@ -75,7 +75,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     }
     
     func takeUserLife() {
-        if cicleState == .running && userLife > 0 {
+        if cicleState == .running && userLife > 1 {
             cicleState = .restarting
             self.lifeDamageAnimationAmount = 1
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -84,23 +84,27 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
             userLife -= 1
             restartCicle()
             print("userLife = \(userLife)")
-        } else if cicleState == .running && userLife == 0 {
+        } else if cicleState == .running && userLife == 1 {
             print("fail")
             exit()
-            isSuccess = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isFail = true
+            }
         }
     }
     
     func takeMonsterLife() {
-        if cicleState == .running && monsterLife > 0 {
+        if cicleState == .running && monsterLife > 1 {
             cicleState = .monsterTakingDamage
             monsterLife -= 1
             restartCicle()
             print("monsterLife = \(monsterLife)")
-        } else if cicleState == .running && monsterLife == 0 {
+        } else if cicleState == .running && monsterLife == 1 {
             print("success")
             exit()
-            isSuccess = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isSuccess = true
+            }
         }
     }
     
@@ -242,7 +246,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
         
         cicleState = .running
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
                 self.monsterTimer = timer
                 zPosition = zPosition + 0.1
@@ -252,7 +256,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
                     timer.invalidate()
                 }
             }
-//        }
+        }
     }
     
     func attachSoundToMonster() {

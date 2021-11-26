@@ -56,11 +56,11 @@ struct MonsterView : View {
                     
                     Spacer()
                     
-                    Text(arDelegate.message)
-                        .foregroundColor(.red)
-                        .foregroundColor(Color.primary)
-                        .background(Color.secondary)
-                        .frame(width: geo.size.width * 0.3, alignment: .center)
+//                    Text(arDelegate.message)
+//                        .foregroundColor(.red)
+//                        .foregroundColor(Color.primary)
+//                        .background(Color.secondary)
+//                        .frame(width: geo.size.width * 0.3, alignment: .center)
                     
                     Button(action: {
                         print("ar_power_button")
