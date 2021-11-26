@@ -9,10 +9,20 @@ import Foundation
 import ARKit
 import RealityKit
 
+enum cicleEnum {
+    case running
+    case restarting
+    case monsterTakingDamage
+}
+
 class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     @Published var message:String = "starting AR"
-    @Published var userLives:Int = 3
-    @Published var monsterLives:Int = 3
+    @Published var userLife:Int = 3
+    @Published var monsterLife:Int = 3
+    @Published var cicleState:cicleEnum = .running
+    @Published var isSuccess:Bool = false
+    @Published var isFail:Bool = false
+    @Published var lifeDamageAnimationAmount = 2.0
     
     
     
@@ -22,8 +32,9 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     private var circles:[SCNNode] = []
     private var trackedNode:SCNNode?
     
-    let soundAnchor = AnchorEntity()
-    let monsterAnchor = AnchorEntity()
+    let configuration = ARWorldTrackingConfiguration()
+    var soundAnchor: AnchorEntity? = nil
+    var monsterAnchor: AnchorEntity? = nil
     var soundTimer: Timer? = nil
     var monsterTimer: Timer? = nil
     var soundAnchorIsPlaying = false
@@ -32,42 +43,96 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     func setARView(_ arView: ARView) {
         self.arView = arView
         
-        let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
-        arView.session.run(configuration)
+        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         
         arView.session.delegate = self
         
-//        showSoundForRandomTimes()
-        showMonster()
+        startCicle()
     }
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        let distance = DistanceUtils.calculateDistance(first: monsterAnchor.position, second: cameraPosition)
-            print("distance = \(distance)")
-        if distance <= 10 {
-            message = "Morreu pelo session"
+        if monsterAnchor != nil {
+            let distance = DistanceUtils.calculateDistance(first: monsterAnchor!.position, second: cameraPosition)
+            
+            if distance <= 10 {
+                takeUserLife()
+            }
         }
     }
     
     public func castSpell() {
-        message = "spell Casted"
-        
-        let distance = DistanceUtils.calculateDistance(first: monsterAnchor.position, second: cameraPosition)
-            print("distance = \(distance)")
-        if distance >= 10 {
-            message = "Matou"
-        } else {
-            message = "Morreu"
+        if monsterAnchor != nil {
+            message = "spell Casted"
+            
+            let distance = DistanceUtils.calculateDistance(first: monsterAnchor!.position, second: cameraPosition)
+            if distance >= 10 && distance >= 50 {
+                takeMonsterLife()
+            } else {
+                takeUserLife()
+            }
         }
     }
     
-    public func exit() {
-        soundAnchor.stopAllAudio()
-        monsterAnchor.stopAllAudio()
+    func takeUserLife() {
+        if cicleState == .running && userLife > 0 {
+            cicleState = .restarting
+            self.lifeDamageAnimationAmount = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.lifeDamageAnimationAmount = 2
+            }
+            userLife -= 1
+            restartCicle()
+            print("userLife = \(userLife)")
+        } else if cicleState == .running && userLife == 0 {
+            print("fail")
+            exit()
+            isSuccess = true
+        }
+    }
+    
+    func takeMonsterLife() {
+        if cicleState == .running && monsterLife > 0 {
+            cicleState = .monsterTakingDamage
+            monsterLife -= 1
+            restartCicle()
+            print("monsterLife = \(monsterLife)")
+        } else if cicleState == .running && monsterLife == 0 {
+            print("success")
+            exit()
+            isSuccess = true
+        }
+    }
+    
+    func startCicle() {
+    //        showSoundForRandomTimes()
+        showMonster()
+    }
+    
+    func restartCicle() {
+        print("stopping")
+        stopCicle()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                print("starting")
+            self.startCicle()
+        }
+    }
+    
+    func stopCicle() {
+        soundAnchor?.stopAllAudio()
         soundTimer?.invalidate()
+        soundAnchor?.removeFromParent()
+        soundAnchor = nil
+        monsterAnchor?.stopAllAudio()
         monsterTimer?.invalidate()
+        monsterAnchor?.removeFromParent()
+        monsterAnchor = nil
         arView!.scene.anchors.removeAll()
+    }
+    
+    public func exit() {
+        stopCicle()
         arView!.session.pause()
         arView!.removeFromSuperview()
         arView = nil
@@ -126,28 +191,26 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
         let randomPositionY = Float.random(in: -2..<2)
         let randomPositionZ = Float.random(in: -2..<2)
         
-        soundAnchor.position = SIMD3(randomPositionX, randomPositionY, randomPositionZ)
+        soundAnchor = AnchorEntity()
+        
+        soundAnchor!.position = SIMD3(randomPositionX, randomPositionY, randomPositionZ)
         
         attachSoundToEmptyAnchor()
         
         soundAnchorIsPlaying = true
         
-        arView?.scene.addAnchor(soundAnchor)
+        arView?.scene.addAnchor(soundAnchor!)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.removeEmptyAnchor()
         }
     }
     
-    func play(_ name: String, source: SCNAudioSource, node: SCNNode) {
-        let _ = ARAudioPlayer(name: name, source: source, node: node)
-    }
-    
     func attachSoundToEmptyAnchor() {
         do {
             let resource = try AudioFileResource.load(named: "growl.mp3", in: nil, inputMode: .spatial, loadingStrategy: .preload, shouldLoop: false)
             
-            let audioController = soundAnchor.prepareAudio(resource)
+            let audioController = soundAnchor!.prepareAudio(resource)
             audioController.play()
         } catch {
             print("Error loading audio file")
@@ -155,7 +218,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     }
     
     func removeEmptyAnchor() {
-        arView?.scene.removeAnchor(soundAnchor)
+        arView?.scene.removeAnchor(soundAnchor!)
         soundAnchorIsPlaying = false
     }
     
@@ -167,32 +230,36 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
         
         var zPosition: Float = -2
         
-        monsterAnchor.position = SIMD3(0, 0, zPosition)
-        monsterAnchor.transform.rotation = simd_quatf(ix: 0, iy: 1, iz: 0, r: 0)
-        monsterAnchor.addChild(modelEntity.clone(recursive: true))
+        monsterAnchor = AnchorEntity()
+        
+        monsterAnchor!.position = SIMD3(0, 0, zPosition)
+//        monsterAnchor.transform.rotation = simd_quatf(ix: 0, iy: 1, iz: 0, r: 0)
+        monsterAnchor!.addChild(modelEntity.clone(recursive: true))
         
         attachSoundToMonster()
         
-        arView?.scene.addAnchor(monsterAnchor)
+        arView?.scene.addAnchor(monsterAnchor!)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        cicleState = .running
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
                 self.monsterTimer = timer
                 zPosition = zPosition + 0.1
-                self.monsterAnchor.position = SIMD3(0, 0, zPosition)
+                self.monsterAnchor!.position = SIMD3(0, 0, zPosition)
                 
                 if zPosition >= 0 {
                     timer.invalidate()
                 }
             }
-        }
+//        }
     }
     
     func attachSoundToMonster() {
         do {
             let resource = try AudioFileResource.load(named: "growl.mp3", in: nil, inputMode: .spatial, loadingStrategy: .preload, shouldLoop: false)
             
-            let audioController = monsterAnchor.prepareAudio(resource)
+            let audioController = monsterAnchor!.prepareAudio(resource)
             audioController.play()
         } catch {
             print("Error loading audio file")

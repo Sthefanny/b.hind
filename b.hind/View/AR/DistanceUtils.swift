@@ -21,7 +21,7 @@ class DistanceUtils {
             distance *= 100 // convert in cm
             return abs(distance)
         } else {
-            return -500
+            return 500
         }
     }
 }

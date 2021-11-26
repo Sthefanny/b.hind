@@ -10,7 +10,6 @@
 		3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */; };
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
 		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
-		E578E98227500C2800A3624C /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E578E98127500C2800A3624C /* Monster.usdz */; };
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
 		E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */; };
 		E5C207BD273EF79200D769C0 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BC273EF79200D769C0 /* CustomARView.swift */; };
@@ -20,6 +19,9 @@
 		E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E5DD6348273C592900505CA4 /* Experience.rcproject */; };
 		E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DD634A273C592C00505CA4 /* Assets.xcassets */; };
 		E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */; };
+		E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5E626B0275059D7001FDE96 /* Monster.usdz */; };
+		E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */; };
+		E5E626B52750652D001FDE96 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B42750652D001FDE96 /* FailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,6 @@
 		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
 		E554617E274EA35A000FFDA6 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
-		E578E98127500C2800A3624C /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		E5C207BC273EF79200D769C0 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
@@ -38,6 +39,9 @@
 		E5DD6348273C592900505CA4 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		E5DD634A273C592C00505CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5E626B0275059D7001FDE96 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
+		E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateOfAchievementView.swift; sourceTree = "<group>"; };
+		E5E626B42750652D001FDE96 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				E5C207BC273EF79200D769C0 /* CustomARView.swift */,
 				E554617C274EA2DD000FFDA6 /* ARDelegate.swift */,
 				E554617E274EA35A000FFDA6 /* DistanceUtils.swift */,
+				E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */,
+				E5E626B42750652D001FDE96 /* FailView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -91,7 +97,7 @@
 		E5C207B7273EF0D800D769C0 /* 3D Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E578E98127500C2800A3624C /* Monster.usdz */,
+				E5E626B0275059D7001FDE96 /* Monster.usdz */,
 			);
 			path = "3D Assets";
 			sourceTree = "<group>";
@@ -202,7 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E578E98227500C2800A3624C /* Monster.usdz in Resources */,
+				E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
 				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
@@ -221,9 +227,11 @@
 				E5DD6347273C592900505CA4 /* MonsterView.swift in Sources */,
 				E5DD6345273C592900505CA4 /* bhindApp.swift in Sources */,
 				E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */,
+				E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */,
 				E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */,
 				E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */,
 				E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */,
+				E5E626B52750652D001FDE96 /* FailView.swift in Sources */,
 				3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
