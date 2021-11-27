@@ -20,6 +20,7 @@
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
 		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
+		E591FD3F2752A99300890041 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E591FD3E2752A99300890041 /* Monster.usdz */; };
 		E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */; };
 		E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */; };
 		E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */; };
@@ -31,7 +32,6 @@
 		E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E5DD6348273C592900505CA4 /* Experience.rcproject */; };
 		E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DD634A273C592C00505CA4 /* Assets.xcassets */; };
 		E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */; };
-		E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E5E626B0275059D7001FDE96 /* Monster.usdz */; };
 		E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */; };
 		E5E626B52750652D001FDE96 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B42750652D001FDE96 /* FailView.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +51,7 @@
 		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
 		E554617E274EA35A000FFDA6 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		E591FD3E2752A99300890041 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
 		E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpecialElite-Regular.ttf"; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		E5DD6348273C592900505CA4 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		E5DD634A273C592C00505CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DD634D273C592C00505CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E5E626B0275059D7001FDE96 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateOfAchievementView.swift; sourceTree = "<group>"; };
 		E5E626B42750652D001FDE96 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,7 @@
 		E5C207B7273EF0D800D769C0 /* 3D Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E5E626B0275059D7001FDE96 /* Monster.usdz */,
+				E591FD3E2752A99300890041 /* Monster.usdz */,
 			);
 			path = "3D Assets";
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */,
 				03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
 				E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */,
+				E591FD3F2752A99300890041 /* Monster.usdz in Resources */,
 				E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */,
 				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
 				E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */,
