@@ -8,6 +8,7 @@
 import AVKit
 
 enum SoundOption: String {
+    case number9
     case ringtone
     case proposal
     case options

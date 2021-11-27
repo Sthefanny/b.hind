@@ -41,7 +41,7 @@ struct CallView: View {
                 HStack{
                     CallButtonView(number: 7, sound: .options)
                     CallButtonView(number: 8, sound: .options)
-                    CallButtonView(number: 9, sound: .options)
+                    CallButtonView(number: 9, sound: .proposal)
                 }//buttons - third line
                 
                 HStack{
