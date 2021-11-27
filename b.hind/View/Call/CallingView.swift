@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct CallingView: View {
     
@@ -48,6 +49,9 @@ struct CallingView: View {
             
         }
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            CallManager.instance.playSound(sound: .ringtone)
+        }
     }
 }
 

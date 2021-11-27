@@ -10,11 +10,12 @@ import SwiftUI
 struct CallButtonView: View {
     
     var number: Int
+    var sound: SoundOption
     
     var body: some View {
 
         Button {
-            print(number)
+            CallManager.instance.playSound(sound: sound)
         } label: {
             Text(number.description)
                 .frame(width: 78, height: 78, alignment: .center)
@@ -29,6 +30,6 @@ struct CallButtonView: View {
 
 struct CallButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        CallButtonView(number: 0)
+        CallButtonView(number: 0, sound: .options)
     }
 }
