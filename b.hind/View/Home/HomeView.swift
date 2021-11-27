@@ -69,6 +69,7 @@ struct HomeView : View {
                 .edgesIgnoringSafeArea(.all)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

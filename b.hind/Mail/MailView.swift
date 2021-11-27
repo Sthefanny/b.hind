@@ -64,6 +64,7 @@ struct MailView : View {
             }
             .edgesIgnoringSafeArea(.all)
         }
+        .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
             leading: Button(action: {self.mode.wrappedValue.dismiss()}) {
