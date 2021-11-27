@@ -27,27 +27,27 @@ struct CallView: View {
                     .padding()
                 Spacer()
                 HStack{
-                    CallButtonView(number: 1)
-                    CallButtonView(number: 2)
-                    CallButtonView(number: 3)
+                    CallButtonView(number: 1, sound: .call1)
+                    CallButtonView(number: 2, sound: .call2)
+                    CallButtonView(number: 3, sound: .call3)
                 }//buttons - first line
                 
                 HStack{
-                    CallButtonView(number: 4)
-                    CallButtonView(number: 5)
-                    CallButtonView(number: 6)
+                    CallButtonView(number: 4, sound: .options)
+                    CallButtonView(number: 5, sound: .options)
+                    CallButtonView(number: 6, sound: .options)
                 }//buttons - second line
                 
                 HStack{
-                    CallButtonView(number: 7)
-                    CallButtonView(number: 8)
-                    CallButtonView(number: 9)
+                    CallButtonView(number: 7, sound: .options)
+                    CallButtonView(number: 8, sound: .options)
+                    CallButtonView(number: 9, sound: .proposal)
                 }//buttons - third line
                 
                 HStack{
-                    UselessButtonView(buttonImage: "asterisk")
-                    CallButtonView(number: 0)
-                    UselessButtonView(buttonImage: "hashtag")
+                    UselessButtonView(buttonImage: "asterisk", sound: .options)
+                    CallButtonView(number: 0, sound: .options)
+                    UselessButtonView(buttonImage: "hashtag", sound: .options)
                 }//buttons - fourth line
                 
                 HStack{
@@ -60,6 +60,9 @@ struct CallView: View {
         }
         .background(Color(.black))
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            CallManager.instance.playSound(sound: .proposal)
+        }
         //main Zstack
     }
 }

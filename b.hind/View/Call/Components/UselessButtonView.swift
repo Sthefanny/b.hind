@@ -10,11 +10,12 @@ import SwiftUI
 struct UselessButtonView: View {
     
     var buttonImage: String
+    var sound: SoundOption
     
     var body: some View {
 
         Button {
-            print(buttonImage)
+            CallManager.instance.playSound(sound: sound)
         } label: {
             Image(buttonImage)
                 .frame(width: 78, height: 78, alignment: .center)
@@ -28,6 +29,6 @@ struct UselessButtonView: View {
 
 struct UselessButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        UselessButtonView(buttonImage: "hashtag")
+        UselessButtonView(buttonImage: "hashtag", sound: .options)
     }
 }
