@@ -134,13 +134,13 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
         monsterTimer?.invalidate()
         monsterAnchor?.removeFromParent()
         monsterAnchor = nil
-        arView!.scene.anchors.removeAll()
+        arView?.scene.anchors.removeAll()
     }
     
     public func exit() {
         stopCicle()
-        arView!.session.pause()
-        arView!.removeFromSuperview()
+        arView?.session.pause()
+        arView?.removeFromSuperview()
         arView = nil
     }
     

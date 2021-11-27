@@ -60,6 +60,7 @@ struct CallView: View {
         }
         .background(Color(.black))
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
         //main Zstack
     }
 }

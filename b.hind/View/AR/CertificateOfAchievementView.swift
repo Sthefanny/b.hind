@@ -107,6 +107,7 @@ struct CertificateOfAchievementView : View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
     }
 }
 

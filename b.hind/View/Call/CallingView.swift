@@ -48,6 +48,7 @@ struct CallingView: View {
             
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
     }
 }
 

@@ -60,6 +60,7 @@ struct HomeView : View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
     }
     
     var buildSettings: some View {
