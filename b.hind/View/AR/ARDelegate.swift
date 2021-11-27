@@ -39,6 +39,8 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     var monsterTimer: Timer? = nil
     var soundAnchorIsPlaying = false
     var cameraPosition: SIMD3<Float>?
+    var maxPosition: Float = 5
+    var minPosition: Float = -5
     
     func setARView(_ arView: ARView) {
         self.arView = arView
@@ -109,7 +111,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     }
     
     func startCicle() {
-    //        showSoundForRandomTimes()
+//        showSoundForRandomTimes()
         showMonster()
     }
     
@@ -170,6 +172,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
 //        return results.first
 //    }
     
+    
     func showSoundForRandomTimes() {
         let quantityToShow = Int.random(in: 3..<6)
         
@@ -191,9 +194,9 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     }
     
     func showEmptyAnchor() {
-        let randomPositionX = Float.random(in: -2..<2)
-        let randomPositionY = Float.random(in: -2..<2)
-        let randomPositionZ = Float.random(in: -2..<2)
+        let randomPositionX = Float.random(in: minPosition..<maxPosition)
+        let randomPositionY = Float.random(in: minPosition..<maxPosition)
+        let randomPositionZ = Float.random(in: minPosition..<maxPosition)
         
         soundAnchor = AnchorEntity()
         
@@ -227,12 +230,12 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     }
     
     func showMonster() {
-        let randomPositionX = Float.random(in: -2..<2)
-        let randomPositionY = Float.random(in: -2..<2)
+//        let randomPositionX = Float.random(in: minPosition..<maxPosition)
+//        let randomPositionY = Float.random(in: minPosition..<maxPosition)
         
         let modelEntity = try! ModelEntity.loadModel(named: "Monster.usdz")
         
-        var zPosition: Float = -2
+        var zPosition: Float = minPosition
         
         monsterAnchor = AnchorEntity()
         
@@ -246,11 +249,11 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
         
         cicleState = .running
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
                 self.monsterTimer = timer
                 zPosition = zPosition + 0.1
-                self.monsterAnchor!.position = SIMD3(0, 0, zPosition)
+                self.monsterAnchor?.position = SIMD3(0, 0, zPosition)
                 
                 if zPosition >= 0 {
                     timer.invalidate()

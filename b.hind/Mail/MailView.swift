@@ -39,10 +39,6 @@ struct MailView : View {
                                 .frame(width: geo.size.width * 0.15, height: geo.size.height * 0.06, alignment: .center)
                                 .background(Color("mail_go_button"))
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
-                                .background(
-                                    RoundedRectangle(cornerRadius: 5)
-                                        .stroke(Color("mail_go_button"), lineWidth: 1)
-                                )
                                 .shadow(color: .black.opacity(0.25), radius: 4, x: 0, y: 4)
                         }
                     }
@@ -50,10 +46,6 @@ struct MailView : View {
                     .padding(.horizontal, 25)
                     .background(Color("mail_case_bg"))
                     .clipShape(RoundedRectangle(cornerRadius: 14))
-                    .background(
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(Color("mail_case_bg"), lineWidth: 1)
-                    )
                     .shadow(color: .black.opacity(0.25), radius: 4, x: 0, y: 4)
                     
                     Spacer()
