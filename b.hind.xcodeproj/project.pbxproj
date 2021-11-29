@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03098794275415C900B01BAB /* GameOverVersion1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03098793275415C900B01BAB /* GameOverVersion1View.swift */; };
 		030B0834274D767900AB6F18 /* CallingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B0833274D767900AB6F18 /* CallingView.swift */; };
 		030B0838274D77BD00AB6F18 /* AcceptCallButtomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B0837274D77BD00AB6F18 /* AcceptCallButtomView.swift */; };
 		0312AAB62746CF0600E8805E /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0312AAB52746CF0600E8805E /* CallView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03098793275415C900B01BAB /* GameOverVersion1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverVersion1View.swift; sourceTree = "<group>"; };
 		030B0833274D767900AB6F18 /* CallingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingView.swift; sourceTree = "<group>"; };
 		030B0837274D77BD00AB6F18 /* AcceptCallButtomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptCallButtomView.swift; sourceTree = "<group>"; };
 		0312AAB52746CF0600E8805E /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030987922754157500B01BAB /* Game Over */ = {
+			isa = PBXGroup;
+			children = (
+				03098793275415C900B01BAB /* GameOverVersion1View.swift */,
+			);
+			path = "Game Over";
+			sourceTree = "<group>";
+		};
 		0312AAB42746CECC00E8805E /* Call */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		E5269BEA273D9C4B007D0837 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				030987922754157500B01BAB /* Game Over */,
 				0312AAB42746CECC00E8805E /* Call */,
 				E5269BEB273D9DF4007D0837 /* AR */,
 				3606CBB367A15D15352319C9 /* Home */,
@@ -299,7 +310,6 @@
 			files = (
 				039FF89D2752ACC30071529D /* call1.m4a in Resources */,
 				03193A90275174480039B492 /* ringtone.mp3 in Resources */,
-				E5E626B1275059D7001FDE96 /* Monster.usdz in Resources */,
 				03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
 				E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */,
@@ -338,6 +348,7 @@
 				E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */,
 				E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */,
 				E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */,
+				03098794275415C900B01BAB /* GameOverVersion1View.swift in Sources */,
 				E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */,
 				03193A9E275296A70039B492 /* CallManager.swift in Sources */,
 				E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */,
