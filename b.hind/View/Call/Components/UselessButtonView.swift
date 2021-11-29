@@ -12,10 +12,15 @@ struct UselessButtonView: View {
     var buttonImage: String
     var sound: SoundOption
     
+    @Binding var enabled: Bool
+    
     var body: some View {
 
         Button {
-            CallManager.instance.playSound(sound: sound)
+            if enabled == true {
+                enabled = false
+                CallManager.instance.playSound(sound: sound)
+            }
         } label: {
             Image(buttonImage)
                 .frame(width: 78, height: 78, alignment: .center)
@@ -24,11 +29,12 @@ struct UselessButtonView: View {
                 .clipShape(Circle())
         }
         .padding(10)
+        .disabled(enabled == false)
     }
 }
 
 struct UselessButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        UselessButtonView(buttonImage: "hashtag", sound: .options)
+        UselessButtonView(buttonImage: "hashtag", sound: .options, enabled: .constant(false))
     }
 }

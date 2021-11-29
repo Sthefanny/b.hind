@@ -8,59 +8,60 @@ struct HomeView : View {
     let size = UIScreen.main.bounds.size
     
     var body: some View {
-        return NavigationView {
-            ZStack {
-                Color.black.edgesIgnoringSafeArea(.all)
+        return ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+            Image("home_bg")
+                .resizable()
+                .scaledToFill()
+                .frame(width: size.width, height: size.height)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack (alignment: .center) {
+                buildSettings
+                buildHint
                 
-                Image("home_bg")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: size.width, height: size.height)
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack (alignment: .center) {
-                    buildSettings
-                    buildHint
+                HStack (alignment: .top) {
+                    Spacer()
+                    VStack (alignment: .center)  {
+                        buildBgoodApp
+                        buildBBankApp
+                    }
+                    .frame(width: size.width * 0.3, alignment: .trailing)
                     
-                    HStack (alignment: .top) {
-                        Spacer()
-                        VStack (alignment: .center)  {
-                            buildBgoodApp
-                            buildBBankApp
-                        }
-                        .frame(width: size.width * 0.3, alignment: .trailing)
-                        
-                        VStack (alignment: .center) {
-                            HStack {
-                                buildBOnTimeApp
-                                
-                                Spacer()
-                                
-                                buildBGrimApp
-                                
-                            }
-                            buildWidgetApp
+                    VStack (alignment: .center) {
+                        HStack {
+                            buildBOnTimeApp
+                            
+                            Spacer()
+                            
+                            buildBGrimApp
                             
                         }
-                        .frame(width: size.width * 0.5, alignment: .leading)
-                        .padding(.horizontal, 70)
-                        
-                        Spacer()
+                        buildWidgetApp
                         
                     }
-                    .padding(.top, 20)
-                    .frame(width: size.width, alignment: .center)
+                    .frame(width: size.width * 0.5, alignment: .leading)
+                    .padding(.horizontal, 70)
+                    
                     Spacer()
                     
-                    buildBottomApps
                 }
-                .padding(.bottom, 30)
-                .frame(width: size.width, height: size.height, alignment: .top)
-                .edgesIgnoringSafeArea(.all)
+                .padding(.top, 20)
+                .frame(width: size.width, alignment: .center)
+                Spacer()
+                
+                buildBottomApps
             }
+            .padding(.bottom, 30)
+            .frame(width: size.width, height: size.height, alignment: .top)
+            .edgesIgnoringSafeArea(.all)
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
+        .onAppear {
+            UserRepository().storeIsFirtTimeInfo(isFirstTime: true)
+        }
     }
     
     var buildSettings: some View {
@@ -78,7 +79,7 @@ struct HomeView : View {
                     .font(.system(size: 17, weight: .semibold))
                     .foregroundColor(Color("home_title"))
                     .padding(.bottom, 2)
-                .padding(.top, 10)
+                    .padding(.top, 10)
                 
                 Spacer()
                 

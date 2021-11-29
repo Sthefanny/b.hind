@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct bhindApp: App {
+    let userRepository = UserRepository()
+    
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            let isFirstTime = userRepository.getIsFirstTimeInfo()
+            
+            if isFirstTime == true {
+                WarningView()
+            } else {
+                HomeView()
+            }
         }
     }
 }
