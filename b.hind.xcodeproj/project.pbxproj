@@ -19,11 +19,11 @@
 		03193A90275174480039B492 /* ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 03193A8F275174480039B492 /* ringtone.mp3 */; };
 		03193A9E275296A70039B492 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03193A9D275296A70039B492 /* CallManager.swift */; };
 		03312C22274C2B2A00C48573 /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03312C21274C2B2A00C48573 /* CallButtonView.swift */; };
-		039FF8992752AC9D0071529D /* proposal.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF8982752AC9C0071529D /* proposal.m4a */; };
-		039FF89B2752ACB00071529D /* options.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF89A2752ACB00071529D /* options.m4a */; };
-		039FF89D2752ACC30071529D /* call1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF89C2752ACC30071529D /* call1.m4a */; };
-		039FF89F2752ACE90071529D /* call2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF89E2752ACE90071529D /* call2.m4a */; };
-		039FF8A12752AD030071529D /* call3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF8A02752AD030071529D /* call3.m4a */; };
+		03A82DF82755091800EE3498 /* call3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03A82DF32755090B00EE3498 /* call3.wav */; };
+		03A82DF92755091800EE3498 /* call2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03A82DF42755090E00EE3498 /* call2.wav */; };
+		03A82DFA2755091800EE3498 /* call1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03A82DF52755091000EE3498 /* call1.wav */; };
+		03A82DFB2755091800EE3498 /* options.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03A82DF62755091300EE3498 /* options.wav */; };
+		03A82DFC2755091800EE3498 /* proposal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03A82DF72755091700EE3498 /* proposal.wav */; };
 		3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */; };
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
 		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
@@ -57,11 +57,11 @@
 		03193A8F275174480039B492 /* ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ringtone.mp3; sourceTree = "<group>"; };
 		03193A9D275296A70039B492 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		03312C21274C2B2A00C48573 /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
-		039FF8982752AC9C0071529D /* proposal.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = proposal.m4a; sourceTree = "<group>"; };
-		039FF89A2752ACB00071529D /* options.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = options.m4a; sourceTree = "<group>"; };
-		039FF89C2752ACC30071529D /* call1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = call1.m4a; sourceTree = "<group>"; };
-		039FF89E2752ACE90071529D /* call2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = call2.m4a; sourceTree = "<group>"; };
-		039FF8A02752AD030071529D /* call3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = call3.m4a; sourceTree = "<group>"; };
+		03A82DF32755090B00EE3498 /* call3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = call3.wav; sourceTree = "<group>"; };
+		03A82DF42755090E00EE3498 /* call2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = call2.wav; sourceTree = "<group>"; };
+		03A82DF52755091000EE3498 /* call1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = call1.wav; sourceTree = "<group>"; };
+		03A82DF62755091300EE3498 /* options.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = options.wav; sourceTree = "<group>"; };
+		03A82DF72755091700EE3498 /* proposal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = proposal.wav; sourceTree = "<group>"; };
 		3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
@@ -130,11 +130,11 @@
 		03193A8E275170D90039B492 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				039FF8982752AC9C0071529D /* proposal.m4a */,
-				039FF89A2752ACB00071529D /* options.m4a */,
-				039FF89C2752ACC30071529D /* call1.m4a */,
-				039FF89E2752ACE90071529D /* call2.m4a */,
-				039FF8A02752AD030071529D /* call3.m4a */,
+				03A82DF52755091000EE3498 /* call1.wav */,
+				03A82DF42755090E00EE3498 /* call2.wav */,
+				03A82DF32755090B00EE3498 /* call3.wav */,
+				03A82DF62755091300EE3498 /* options.wav */,
+				03A82DF72755091700EE3498 /* proposal.wav */,
 				03193A8F275174480039B492 /* ringtone.mp3 */,
 			);
 			path = Sounds;
@@ -308,21 +308,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				039FF89D2752ACC30071529D /* call1.m4a in Resources */,
 				03193A90275174480039B492 /* ringtone.mp3 in Resources */,
 				03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
 				E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */,
 				E591FD3F2752A99300890041 /* Monster.usdz in Resources */,
 				E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */,
-				039FF8A12752AD030071529D /* call3.m4a in Resources */,
+				03A82DF82755091800EE3498 /* call3.wav in Resources */,
+				03A82DF92755091800EE3498 /* call2.wav in Resources */,
 				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
 				E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */,
-				039FF89F2752ACE90071529D /* call2.m4a in Resources */,
+				03A82DFC2755091800EE3498 /* proposal.wav in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
+				03A82DFB2755091800EE3498 /* options.wav in Resources */,
 				03192A13274EBFAA0002BFFE /* JosefinSans-Bold.ttf in Resources */,
-				039FF8992752AC9D0071529D /* proposal.m4a in Resources */,
-				039FF89B2752ACB00071529D /* options.m4a in Resources */,
+				03A82DFA2755091800EE3498 /* call1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

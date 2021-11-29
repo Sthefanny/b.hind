@@ -26,7 +26,7 @@ class CallManager {
 
     func playSound(sound: SoundOption) {
         stopSound()
-        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: sound == .ringtone ? ".mp3" : ".m4a") else { return }
+        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: sound == .ringtone ? ".mp3" : ".wav") else { return }
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
