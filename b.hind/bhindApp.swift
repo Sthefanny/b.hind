@@ -13,13 +13,13 @@ struct bhindApp: App {
     
     var body: some Scene {
         WindowGroup {
-            let isFirstTime = userRepository.getIsFirstTimeInfo()
-            
-            if isFirstTime == true {
+//            let isFirstTime = userRepository.getIsFirstTimeInfo()
+//            
+//            if isFirstTime == true {
                 WarningView()
-            } else {
-                HomeView()
-            }
+//            } else {
+//                HomeView()
+//            }
         }
     }
 }
