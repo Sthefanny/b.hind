@@ -31,6 +31,7 @@
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
 		E591FD3F2752A99300890041 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E591FD3E2752A99300890041 /* Monster.usdz */; };
 		E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */; };
+		E5A2AA6127551CA0002C2CF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A2AA6027551CA0002C2CF2 /* LaunchScreen.storyboard */; };
 		E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */; };
 		E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */; };
 		E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */; };
@@ -70,6 +71,7 @@
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		E591FD3E2752A99300890041 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
+		E5A2AA6027551CA0002C2CF2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpecialElite-Regular.ttf"; sourceTree = "<group>"; };
 		E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		E5269BEA273D9C4B007D0837 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E5A2AA5F27551C88002C2CF2 /* LaunchScreen */,
 				030987922754157500B01BAB /* Game Over */,
 				0312AAB42746CECC00E8805E /* Call */,
 				E5269BEB273D9DF4007D0837 /* AR */,
@@ -197,6 +200,14 @@
 				E58E4C28274BFDB200B45EB0 /* MailView.swift */,
 			);
 			path = Mail;
+			sourceTree = "<group>";
+		};
+		E5A2AA5F27551C88002C2CF2 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E5A2AA6027551CA0002C2CF2 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		E5C207B7273EF0D800D769C0 /* 3D Assets */ = {
@@ -325,6 +336,7 @@
 				E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */,
 				039FF8A12752AD030071529D /* call3.m4a in Resources */,
 				E5D0FC702746D4A300EA7D5D /* growl.mp3 in Resources */,
+				E5A2AA6127551CA0002C2CF2 /* LaunchScreen.storyboard in Resources */,
 				E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */,
 				039FF89F2752ACE90071529D /* call2.m4a in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
@@ -505,6 +517,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "To use Augmented Reality, this app needs access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "armv7 arkit";
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -541,6 +554,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "To use Augmented Reality, this app needs access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "armv7 arkit";
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
