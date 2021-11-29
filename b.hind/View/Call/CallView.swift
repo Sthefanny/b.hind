@@ -11,6 +11,10 @@ import SwiftUI
 
 struct CallView: View {
     
+    @State var enabled = false
+    @State var showAction1 = false
+    @State var showAction2 = false
+    
     var body: some View {
         ZStack (alignment: .center) {
             Image("call_bg")
@@ -27,27 +31,67 @@ struct CallView: View {
                     .padding()
                 Spacer()
                 HStack{
-                    CallButtonView(number: 1, sound: .call1)
-                    CallButtonView(number: 2, sound: .call2)
-                    CallButtonView(number: 3, sound: .call3)
+                    CallButtonView(number: 1, sound: .call1, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 38) {
+                            showAction1 = true
+                        }
+                    })
+                    CallButtonView(number: 2, sound: .call2, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                            showAction2 = true
+                        }
+                    })
+                    CallButtonView(number: 3, sound: .call3, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 28) {
+                            enabled = true
+                        }
+                    })
                 }//buttons - first line
                 
                 HStack{
-                    CallButtonView(number: 4, sound: .options)
-                    CallButtonView(number: 5, sound: .options)
-                    CallButtonView(number: 6, sound: .options)
+                    CallButtonView(number: 4, sound: .options, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 19) {
+                            enabled = true
+                        }
+                    })
+                    CallButtonView(number: 5, sound: .options, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
+                            enabled = true
+                        }
+                    })
+                    CallButtonView(number: 6, sound: .options, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
+                            enabled = true
+                        }
+                    })
                 }//buttons - second line
                 
                 HStack{
-                    CallButtonView(number: 7, sound: .options)
-                    CallButtonView(number: 8, sound: .options)
-                    CallButtonView(number: 9, sound: .proposal)
+                    CallButtonView(number: 7, sound: .options, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
+                            enabled = true
+                        }
+                    })
+                    CallButtonView(number: 8, sound: .options, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
+                            enabled = true
+                        }
+                    })
+                    CallButtonView(number: 9, sound: .proposal, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
+                            enabled = true
+                        }
+                    })
                 }//buttons - third line
                 
                 HStack{
-                    UselessButtonView(buttonImage: "asterisk", sound: .options)
-                    CallButtonView(number: 0, sound: .options)
-                    UselessButtonView(buttonImage: "hashtag", sound: .options)
+                    UselessButtonView(buttonImage: "asterisk", sound: .options, enabled: $enabled)
+                    CallButtonView(number: 0, sound: .options, enabled: $enabled, action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
+                            enabled = true
+                        }
+                    })
+                    UselessButtonView(buttonImage: "hashtag", sound: .options, enabled: $enabled)
                 }//buttons - fourth line
                 
                 HStack{
@@ -55,13 +99,24 @@ struct CallView: View {
                 }
                 .padding()
                 
+                NavigationLink(destination: HomeView(), isActive: $showAction1) {
+                    EmptyView()
+                }
+                
+                NavigationLink(destination: GameOverVersion1View(), isActive: $showAction2) {
+                    EmptyView()
+                }
             }
 
         }
         .background(Color(.black))
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
         .onAppear {
             CallManager.instance.playSound(sound: .proposal)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
+                enabled = true
+            }
         }
         //main Zstack
     }

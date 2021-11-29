@@ -49,6 +49,7 @@ struct CallingView: View {
             
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
         .onAppear {
             CallManager.instance.playSound(sound: .ringtone)
         }

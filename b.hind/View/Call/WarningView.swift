@@ -51,7 +51,8 @@ struct WarningView: View {
             
             
         } //navigationview
-        
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
         
     }
 }

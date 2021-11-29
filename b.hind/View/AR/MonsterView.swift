@@ -118,6 +118,7 @@ struct MonsterView : View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
     }
     
     func getUserLife() -> String {

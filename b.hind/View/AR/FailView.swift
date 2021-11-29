@@ -76,6 +76,7 @@ struct FailView : View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("")
     }
 }
 
