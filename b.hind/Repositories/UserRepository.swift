@@ -9,14 +9,13 @@ import Foundation
 
 class UserRepository {
     
-    func setShowOnboardingInfo(isFirstTime: Bool) {
-        UserDefaults.standard.set(isFirstTime, forKey: "showOnboarding")
+    func setShowOnboardingInfo(showOnboarding: Bool) {
+        UserDefaults.standard.set(showOnboarding, forKey: "showOnboarding")
     }
     
     func getShowOnboardingInfo() -> Bool {
-        let isFirstTime = UserDefaults.standard.bool(forKey: "showOnboarding")
-        print("isFirstTime == \(isFirstTime)")
-        return isFirstTime
+        let showOnboarding = UserDefaults.standard.bool(forKey: "showOnboarding")
+        return showOnboarding
     }
     
     func removeShowOnboardingInfo() {

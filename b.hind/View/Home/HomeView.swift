@@ -61,7 +61,7 @@ struct HomeView : View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         .onAppear {
-            UserRepository().setShowOnboardingInfo(isFirstTime: false)
+            UserRepository().setShowOnboardingInfo(showOnboarding: false)
             
             Analytics.logEvent(AnalyticsEventScreenView,
                            parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",

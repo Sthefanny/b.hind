@@ -20,9 +20,6 @@ struct CallView: View {
             Image("call_bg")
                 .resizable()
                 .ignoresSafeArea()
-            Rectangle()
-                .foregroundColor(Color.black.opacity(0.20))
-                .ignoresSafeArea()
             VStack{
                 Spacer()
                 Text("B.hind")
@@ -109,11 +106,14 @@ struct CallView: View {
             }
 
         }
+        .ignoresSafeArea()
         .background(Color(.black))
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
+        .navigationBarItems(trailing: SkipButtonView())
         .onAppear {
             CallManager.instance.playSound(sound: .proposal)
+            showAction2 = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
                 enabled = true
             }

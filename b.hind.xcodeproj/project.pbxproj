@@ -25,6 +25,7 @@
 		039FF89F2752ACE90071529D /* call2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF89E2752ACE90071529D /* call2.m4a */; };
 		039FF8A12752AD030071529D /* call3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF8A02752AD030071529D /* call3.m4a */; };
 		3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */; };
+		E50E2650276138CF00C6A3BD /* SkipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E264F276138CF00C6A3BD /* SkipButtonView.swift */; };
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
 		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
 		E57CA3AC2752DE45001DD1BF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CA3AB2752DE45001DD1BF /* UserRepository.swift */; };
@@ -68,6 +69,7 @@
 		039FF89E2752ACE90071529D /* call2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = call2.m4a; sourceTree = "<group>"; };
 		039FF8A02752AD030071529D /* call3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = call3.m4a; sourceTree = "<group>"; };
 		3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E50E264F276138CF00C6A3BD /* SkipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButtonView.swift; sourceTree = "<group>"; };
 		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
 		E554617E274EA35A000FFDA6 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				03147DBF274C49A100AD51AD /* EndCallbuttonView.swift */,
 				03147DC1274C4FD800AD51AD /* UselessButtonView.swift */,
 				030B0837274D77BD00AB6F18 /* AcceptCallButtomView.swift */,
+				E50E264F276138CF00C6A3BD /* SkipButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				E57CA3AC2752DE45001DD1BF /* UserRepository.swift in Sources */,
 				03147DC2274C4FD800AD51AD /* UselessButtonView.swift in Sources */,
 				E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */,
+				E50E2650276138CF00C6A3BD /* SkipButtonView.swift in Sources */,
 				E5DD6347273C592900505CA4 /* MonsterView.swift in Sources */,
 				0312AAB62746CF0600E8805E /* CallView.swift in Sources */,
 				E5DD6345273C592900505CA4 /* bhindApp.swift in Sources */,

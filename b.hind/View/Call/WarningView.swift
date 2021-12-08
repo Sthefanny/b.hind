@@ -52,11 +52,11 @@ struct WarningView: View {
             
             
         } //navigationview
-        .onAppear() {
-            Analytics.logEvent(AnalyticsEventScreenView,
-                           parameters: [AnalyticsParameterScreenName: "\(WarningView.self)",
-                                        AnalyticsParameterScreenClass: "\(WarningView.self)"])
-        }
+//        .onAppear() {
+//            Analytics.logEvent(AnalyticsEventScreenView,
+//                           parameters: [AnalyticsParameterScreenName: "\(WarningView.self)",
+//                                        AnalyticsParameterScreenClass: "\(WarningView.self)"])
+//        }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         
