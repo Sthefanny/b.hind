@@ -9,33 +9,23 @@ import SwiftUI
 import UIKit
 import Firebase
 
-
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-  var window: UIWindow?
-
-  func application(_ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions:
-   [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
-}
-
 @main
 struct bhindApp: App {
     let userRepository = UserRepository()
     
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-//            let isFirstTime = userRepository.getIsFirstTimeInfo()
-//            
-//            if isFirstTime == true {
+            let showOnboarding = userRepository.getShowOnboardingInfo()
+            
+            if showOnboarding == true {
                 WarningView()
-//            } else {
-//                HomeView()
-//            }
+            } else {
+                HomeView()
+            }
         }
     }
 }
