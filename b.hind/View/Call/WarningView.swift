@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct WarningView: View {
     
@@ -51,6 +52,11 @@ struct WarningView: View {
             
             
         } //navigationview
+//        .onAppear() {
+//            Analytics.logEvent(AnalyticsEventScreenView,
+//                           parameters: [AnalyticsParameterScreenName: "\(WarningView.self)",
+//                                        AnalyticsParameterScreenClass: "\(WarningView.self)"])
+//        }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         

@@ -9,17 +9,16 @@ import Foundation
 
 class UserRepository {
     
-    func storeIsFirtTimeInfo(isFirstTime: Bool) {
-        UserDefaults.standard.set(isFirstTime, forKey: "isFirstTime")
+    func setShowOnboardingInfo(showOnboarding: Bool) {
+        UserDefaults.standard.set(showOnboarding, forKey: "showOnboarding")
     }
     
-    func getIsFirstTimeInfo() -> Bool {
-        let isFirstTime = UserDefaults.standard.bool(forKey: "isFirstTime")
-        print("isFirstTime == \(isFirstTime)")
-        return isFirstTime
+    func getShowOnboardingInfo() -> Bool {
+        let showOnboarding = UserDefaults.standard.bool(forKey: "showOnboarding")
+        return showOnboarding
     }
     
-    func removeIsFirstTimeInfo() {
+    func removeShowOnboardingInfo() {
         UserDefaults.resetStandardUserDefaults()
     }
 }

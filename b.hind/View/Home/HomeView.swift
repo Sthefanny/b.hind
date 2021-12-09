@@ -3,6 +3,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct HomeView : View {
     let size = UIScreen.main.bounds.size
@@ -60,7 +61,11 @@ struct HomeView : View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         .onAppear {
-            UserRepository().storeIsFirtTimeInfo(isFirstTime: true)
+            UserRepository().setShowOnboardingInfo(showOnboarding: false)
+            
+            Analytics.logEvent(AnalyticsEventScreenView,
+                           parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
+                                        AnalyticsParameterScreenClass: "\(HomeView.self)"])
         }
     }
     

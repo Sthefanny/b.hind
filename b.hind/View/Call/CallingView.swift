@@ -32,10 +32,9 @@ struct CallingView: View {
                         .font(.system(size: 34, weight: .regular))
                         .padding(30)
                 }
-                .padding(.top)
-                .padding(.top)
+                .padding(.top, 80)
+                
                 Spacer()
-
 
                 HStack{
                     EndCallbuttonView()
@@ -46,10 +45,13 @@ struct CallingView: View {
                 .padding(.bottom)
 
             }
+            .padding(.vertical, 20)
             
         }
+        .ignoresSafeArea()
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
+        .navigationBarItems(trailing: SkipButtonView())
         .onAppear {
             CallManager.instance.playSound(sound: .ringtone)
         }
