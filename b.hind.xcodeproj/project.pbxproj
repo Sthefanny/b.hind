@@ -19,6 +19,7 @@
 		03193A90275174480039B492 /* ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 03193A8F275174480039B492 /* ringtone.mp3 */; };
 		03193A9E275296A70039B492 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03193A9D275296A70039B492 /* CallManager.swift */; };
 		03312C22274C2B2A00C48573 /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03312C21274C2B2A00C48573 /* CallButtonView.swift */; };
+		0347992C27628B44007990D7 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0347992B27628B44007990D7 /* TutorialView.swift */; };
 		039FF8992752AC9D0071529D /* proposal.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF8982752AC9C0071529D /* proposal.m4a */; };
 		039FF89B2752ACB00071529D /* options.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF89A2752ACB00071529D /* options.m4a */; };
 		039FF89D2752ACC30071529D /* call1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF89C2752ACC30071529D /* call1.m4a */; };
@@ -63,6 +64,7 @@
 		03193A8F275174480039B492 /* ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ringtone.mp3; sourceTree = "<group>"; };
 		03193A9D275296A70039B492 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		03312C21274C2B2A00C48573 /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
+		0347992B27628B44007990D7 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		039FF8982752AC9C0071529D /* proposal.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = proposal.m4a; sourceTree = "<group>"; };
 		039FF89A2752ACB00071529D /* options.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = options.m4a; sourceTree = "<group>"; };
 		039FF89C2752ACC30071529D /* call1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = call1.m4a; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */,
+				0347992B27628B44007990D7 /* TutorialView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				03098794275415C900B01BAB /* GameOverVersion1View.swift in Sources */,
 				E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */,
 				03193A9E275296A70039B492 /* CallManager.swift in Sources */,
+				0347992C27628B44007990D7 /* TutorialView.swift in Sources */,
 				E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */,
 				E5E626B52750652D001FDE96 /* FailView.swift in Sources */,
 				3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */,

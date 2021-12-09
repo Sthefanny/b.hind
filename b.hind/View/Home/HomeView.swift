@@ -7,9 +7,11 @@ import Firebase
 
 struct HomeView : View {
     let size = UIScreen.main.bounds.size
+    @State var showTutorial = false
     
     var body: some View {
         return ZStack {
+
             Color.black.edgesIgnoringSafeArea(.all)
             
             Image("home_bg")
@@ -57,16 +59,24 @@ struct HomeView : View {
             .padding(.bottom, 30)
             .frame(width: size.width, height: size.height, alignment: .top)
             .edgesIgnoringSafeArea(.all)
+            
+            if showTutorial {
+                TutorialView(showTutorial: $showTutorial)
+            }
+            
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         .onAppear {
-            UserRepository().setShowOnboardingInfo(showOnboarding: false)
             
+            UserRepository().setShowOnboardingInfo(showOnboarding: false)
+            showTutorial = UserRepository().getShowOnboardingInfo()
             Analytics.logEvent(AnalyticsEventScreenView,
                            parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
                                         AnalyticsParameterScreenClass: "\(HomeView.self)"])
+            
         }
+        
     }
     
     var buildSettings: some View {
@@ -195,6 +205,8 @@ struct HomeView : View {
                     .padding(.top, 10)
                     .padding(.bottom, 5)
             }
+            
+            
         }
         .frame(width: size.width * 0.9, height: size.height * 0.12, alignment: .center)
         .background(Color("home_bottom_group").opacity(0.6))
