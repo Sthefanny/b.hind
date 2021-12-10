@@ -68,13 +68,11 @@ struct HomeView : View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         .onAppear {
-            
-            UserRepository().setShowOnboardingInfo(showOnboarding: false)
-            showTutorial = UserRepository().getShowOnboardingInfo()
+            TutorialRepository().setShowTutorial(showTutorial: false)
+            showTutorial = TutorialRepository().getShowTutorial()
             Analytics.logEvent(AnalyticsEventScreenView,
                            parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
                                         AnalyticsParameterScreenClass: "\(HomeView.self)"])
-            
         }
         
     }
