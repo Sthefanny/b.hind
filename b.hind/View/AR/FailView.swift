@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FailView : View {
+    @EnvironmentObject var dismisser: HomeViewDismisser
+    
     var body: some View {
         return NavigationView {
             ZStack {
@@ -57,7 +59,11 @@ struct FailView : View {
                         
                         Spacer()
                         
-                        NavigationLink(destination: HomeView()) {
+                        Button(action:{
+                            print("isActive == \(dismisser.isActive)")
+                            dismisser.isActive = false
+                            print("isActive == \(dismisser.isActive)")
+                        }) {
                             Text("Back to Home")
                                 .font(.custom("JosefinSans-Bold", size: 17))
                                 .foregroundColor(.white)

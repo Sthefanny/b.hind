@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 
 struct WarningView: View {
+    @StateObject var dismisser = HomeViewDismisser()
     
     var body: some View {
         
@@ -57,8 +58,10 @@ struct WarningView: View {
 //                           parameters: [AnalyticsParameterScreenName: "\(WarningView.self)",
 //                                        AnalyticsParameterScreenClass: "\(WarningView.self)"])
 //        }
+        .environmentObject(dismisser)
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
+        .navigationViewStyle(.stack)
         
     }
 }

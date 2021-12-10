@@ -20,17 +20,18 @@ struct MailView : View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
+                buildAppBar
                 buildSearchField
                 buildFirstCase
                 
                 Spacer()
             }
             .frame(width: size.width, height: size.height * 0.85, alignment: .center)
+            .background(Color.red)
             
         }
-        .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
-        .navigationBarItems(leading: buildAppBar)
+        .navigationBarHidden(true)
     }
     
     var buildAppBar: some View {

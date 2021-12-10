@@ -11,7 +11,7 @@ import ARKit
 
 struct MonsterView : View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var arDelegate = ARDelegate()
+    @StateObject var arDelegate = ARDelegate()
     @State private var powerButtonAnimationAmount = 2.0
     
     var body: some View {
@@ -117,8 +117,7 @@ struct MonsterView : View {
             .edgesIgnoringSafeArea(.all)
         }
         .edgesIgnoringSafeArea(.all)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
     
     func getUserLife() -> String {

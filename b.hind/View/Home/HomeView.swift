@@ -5,67 +5,71 @@
 import SwiftUI
 import Firebase
 
+class HomeViewDismisser: ObservableObject {
+    @Published var isActive: Bool = false
+}
+
 struct HomeView : View {
     let size = UIScreen.main.bounds.size
+    @EnvironmentObject var dismisser: HomeViewDismisser
     
     var body: some View {
         return ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
-            
-            Image("home_bg")
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.width, height: size.height)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack (alignment: .center) {
-                buildSettings
-                buildHint
+                Color.black.edgesIgnoringSafeArea(.all)
                 
-                HStack (alignment: .top) {
-                    Spacer()
-                    VStack (alignment: .center)  {
-                        buildBgoodApp
-                        buildBBankApp
-                    }
-                    .frame(width: size.width * 0.3, alignment: .trailing)
+                Image("home_bg")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: size.width, height: size.height)
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack (alignment: .center) {
+                    buildSettings
+                    buildHint
                     
-                    VStack (alignment: .center) {
-                        HStack {
-                            buildBOnTimeApp
-                            
-                            Spacer()
-                            
-                            buildBGrimApp
+                    HStack (alignment: .top) {
+                        Spacer()
+                        VStack (alignment: .center)  {
+                            buildBgoodApp
+                            buildBBankApp
+                        }
+                        .frame(width: size.width * 0.3, alignment: .trailing)
+                        
+                        VStack (alignment: .center) {
+                            HStack {
+                                buildBOnTimeApp
+                                
+                                Spacer()
+                                
+                                buildBGrimApp
+                                
+                            }
+                            buildWidgetApp
                             
                         }
-                        buildWidgetApp
+                        .frame(width: size.width * 0.5, alignment: .leading)
+                        .padding(.horizontal, 70)
+                        
+                        Spacer()
                         
                     }
-                    .frame(width: size.width * 0.5, alignment: .leading)
-                    .padding(.horizontal, 70)
-                    
+                    .padding(.top, 20)
+                    .frame(width: size.width, alignment: .center)
                     Spacer()
                     
+                    buildBottomApps
                 }
-                .padding(.top, 20)
-                .frame(width: size.width, alignment: .center)
-                Spacer()
-                
-                buildBottomApps
+                .padding(.bottom, 30)
+                .frame(width: size.width, height: size.height, alignment: .top)
+                .edgesIgnoringSafeArea(.all)
             }
-            .padding(.bottom, 30)
-            .frame(width: size.width, height: size.height, alignment: .top)
-            .edgesIgnoringSafeArea(.all)
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("")
-        .onAppear {
-            UserRepository().setShowOnboardingInfo(showOnboarding: false)
-            
-            Analytics.logEvent(AnalyticsEventScreenView,
-                           parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
-                                        AnalyticsParameterScreenClass: "\(HomeView.self)"])
+            .navigationBarHidden(true)
+            .onAppear {
+                UserRepository().setShowOnboardingInfo(showOnboarding: false)
+                
+                Analytics.logEvent(AnalyticsEventScreenView,
+                               parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
+                                            AnalyticsParameterScreenClass: "\(HomeView.self)"])
         }
     }
     
@@ -187,7 +191,7 @@ struct HomeView : View {
                     .padding(.trailing, 45)
                     .padding(.bottom, 5)
             }
-            NavigationLink(destination: MailView()) {
+            NavigationLink(destination: MailView(), isActive: $dismisser.isActive) {
                 Image("mail_icon")
                     .resizable()
                     .scaledToFill()

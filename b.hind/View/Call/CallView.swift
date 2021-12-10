@@ -99,7 +99,7 @@ struct CallView: View {
                 NavigationLink(destination: HomeView(), isActive: $showAction1) {
                     EmptyView()
                 }
-                
+
                 NavigationLink(destination: GameOverVersion1View(), isActive: $showAction2) {
                     EmptyView()
                 }
@@ -113,7 +113,6 @@ struct CallView: View {
         .navigationBarItems(trailing: SkipButtonView())
         .onAppear {
             CallManager.instance.playSound(sound: .proposal)
-            showAction2 = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
                 enabled = true
             }

@@ -17,7 +17,7 @@ enum cicleEnum {
 
 class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     @Published var message:String = "starting AR"
-    @Published var userLife:Int = 3
+    @Published var userLife:Int = 1
     @Published var monsterLife:Int = 3
     @Published var cicleState:cicleEnum = .running
     @Published var isSuccess:Bool = false
