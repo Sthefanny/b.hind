@@ -10,6 +10,8 @@ import SwiftUI
 
 
 struct CallView: View {
+    @ObservedObject var call = CallManager.instance
+    @StateObject var viewModel = CallViewModel()
     
     @State var enabled = false
     @State var showAction1 = false
@@ -99,13 +101,15 @@ struct CallView: View {
                 }
                 .padding()
                 
-                NavigationLink(destination: HomeView(), isActive: $showAction1) {
-                    EmptyView()
+                
+                
+                if call.shouldGo == true {
+                    Text("apareci")
+                } else {
+                    Text("NÃO apareci")
                 }
                 
-                NavigationLink(destination: GameOverVersion1View(), isActive: $showAction2) {
-                    EmptyView()
-                }
+                NavigationLink(destination: HomeView(), isActive: $call.shouldGo) { EmptyView() }
             }
 
         }
@@ -113,7 +117,7 @@ struct CallView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         .onAppear {
-            CallManager.instance.playSound(sound: .proposal)
+            call.playSound(sound: .call2)
             DispatchQueue.main.asyncAfter(deadline: .now() + 49) {
                 enabled = true
             }

@@ -31,6 +31,7 @@
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
 		E591FD3F2752A99300890041 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E591FD3E2752A99300890041 /* Monster.usdz */; };
 		E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */; };
+		E5AAAF8A2753D3A300281F7F /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AAAF892753D3A300281F7F /* CallViewModel.swift */; };
 		E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */; };
 		E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */; };
 		E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */; };
@@ -70,6 +71,7 @@
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		E591FD3E2752A99300890041 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
+		E5AAAF892753D3A300281F7F /* CallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewModel.swift; sourceTree = "<group>"; };
 		E5C0706B27516B950029FC32 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		E5C0706D2751714E0029FC32 /* SpecialElite-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpecialElite-Regular.ttf"; sourceTree = "<group>"; };
 		E5C207BA273EF75C00D769C0 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				03192A0B274EB6D90002BFFE /* WarningView.swift */,
 				030B0833274D767900AB6F18 /* CallingView.swift */,
 				03193A9D275296A70039B492 /* CallManager.swift */,
+				E5AAAF892753D3A300281F7F /* CallViewModel.swift */,
 			);
 			path = Call;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				03312C22274C2B2A00C48573 /* CallButtonView.swift in Sources */,
 				E5DD6345273C592900505CA4 /* bhindApp.swift in Sources */,
 				030B0838274D77BD00AB6F18 /* AcceptCallButtomView.swift in Sources */,
+				E5AAAF8A2753D3A300281F7F /* CallViewModel.swift in Sources */,
 				03147DC0274C49A100AD51AD /* EndCallbuttonView.swift in Sources */,
 				030B0834274D767900AB6F18 /* CallingView.swift in Sources */,
 				E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */,
