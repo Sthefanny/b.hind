@@ -25,7 +25,7 @@
 		034799322763DD0D007990D7 /* call2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 034799312763DD0D007990D7 /* call2.mp3 */; };
 		034799342763DD50007990D7 /* options.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 034799332763DD50007990D7 /* options.mp3 */; };
 		034799362763DD88007990D7 /* proposal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 034799352763DD87007990D7 /* proposal.mp3 */; };
-		034799382763DDB9007990D7 /* call1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 034799372763DDB9007990D7 /* call1.mp3 */; };
+		0347993A2763E803007990D7 /* call1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 034799392763E803007990D7 /* call1.mp3 */; };
 		3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */; };
 		E50E2650276138CF00C6A3BD /* SkipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E264F276138CF00C6A3BD /* SkipButtonView.swift */; };
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
@@ -71,7 +71,7 @@
 		034799312763DD0D007990D7 /* call2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call2.mp3; sourceTree = "<group>"; };
 		034799332763DD50007990D7 /* options.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = options.mp3; sourceTree = "<group>"; };
 		034799352763DD87007990D7 /* proposal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = proposal.mp3; sourceTree = "<group>"; };
-		034799372763DDB9007990D7 /* call1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call1.mp3; sourceTree = "<group>"; };
+		034799392763E803007990D7 /* call1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call1.mp3; sourceTree = "<group>"; };
 		3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E50E264F276138CF00C6A3BD /* SkipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButtonView.swift; sourceTree = "<group>"; };
 		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			children = (
 				034799352763DD87007990D7 /* proposal.mp3 */,
 				034799332763DD50007990D7 /* options.mp3 */,
-				034799372763DDB9007990D7 /* call1.mp3 */,
+				034799392763E803007990D7 /* call1.mp3 */,
 				034799312763DD0D007990D7 /* call2.mp3 */,
 				0347992F2763DCB8007990D7 /* call3.mp3 */,
 				03193A8F275174480039B492 /* ringtone.mp3 */,
@@ -367,7 +367,7 @@
 				034799322763DD0D007990D7 /* call2.mp3 in Resources */,
 				E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */,
 				E5DDE167275FDF1B00F6E4B3 /* GoogleService-Info.plist in Resources */,
-				034799382763DDB9007990D7 /* call1.mp3 in Resources */,
+				0347993A2763E803007990D7 /* call1.mp3 in Resources */,
 				034799342763DD50007990D7 /* options.mp3 in Resources */,
 				E5DD634B273C592C00505CA4 /* Assets.xcassets in Resources */,
 				03192A13274EBFAA0002BFFE /* JosefinSans-Bold.ttf in Resources */,
