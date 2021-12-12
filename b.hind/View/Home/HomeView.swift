@@ -5,8 +5,13 @@
 import SwiftUI
 import Firebase
 
+class HomeViewDismisser: ObservableObject {
+    @Published var isActive: Bool = false
+}
+
 struct HomeView : View {
     let size = UIScreen.main.bounds.size
+    @EnvironmentObject var dismisser: HomeViewDismisser
     
     var body: some View {
         return ZStack {
@@ -58,14 +63,13 @@ struct HomeView : View {
             .frame(width: size.width, height: size.height, alignment: .top)
             .edgesIgnoringSafeArea(.all)
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("")
+        .navigationBarHidden(true)
         .onAppear {
             UserRepository().setShowOnboardingInfo(showOnboarding: false)
             
             Analytics.logEvent(AnalyticsEventScreenView,
-                           parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
-                                        AnalyticsParameterScreenClass: "\(HomeView.self)"])
+                               parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
+                                           AnalyticsParameterScreenClass: "\(HomeView.self)"])
         }
     }
     
@@ -187,7 +191,7 @@ struct HomeView : View {
                     .padding(.trailing, 45)
                     .padding(.bottom, 5)
             }
-            NavigationLink(destination: MailView()) {
+            NavigationLink(destination: MailView(), isActive: $dismisser.isActive) {
                 Image("mail_icon")
                     .resizable()
                     .scaledToFill()

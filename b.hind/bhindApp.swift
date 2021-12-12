@@ -15,7 +15,7 @@ struct bhindApp: App {
     
     init() {
         FirebaseApp.configure()
-//        userRepository.setShowOnboardingInfo(showOnboarding: true)
+        userRepository.setShowOnboardingInfo(showOnboarding: true)
     }
     
     var body: some Scene {
