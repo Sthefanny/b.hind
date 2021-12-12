@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAnalytics
 
 struct MessageView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
@@ -90,9 +91,9 @@ struct MessageView: View {
             
             showContentByTime()
             
-//            Analytics.logEvent(AnalyticsEventScreenView,
-//                           parameters: [AnalyticsParameterScreenName: "\(MessageView.self)",
-//                                        AnalyticsParameterScreenClass: "\(MessageView.self)"])
+            Analytics.logEvent(AnalyticsEventScreenView,
+                           parameters: [AnalyticsParameterScreenName: "\(MessageView.self)",
+                                        AnalyticsParameterScreenClass: "\(MessageView.self)"])
         }
     }
     

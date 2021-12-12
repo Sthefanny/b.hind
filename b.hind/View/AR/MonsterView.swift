@@ -8,6 +8,8 @@
 import SwiftUI
 import RealityKit
 import ARKit
+import Firebase
+import FirebaseAnalytics
 
 struct MonsterView : View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
@@ -118,6 +120,11 @@ struct MonsterView : View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
+        .onAppear{
+            Analytics.logEvent(AnalyticsEventScreenView,
+                           parameters: [AnalyticsParameterScreenName: "\(MonsterView.self)",
+                                        AnalyticsParameterScreenClass: "\(MonsterView.self)"])
+        }
     }
     
     func getUserLife() -> String {

@@ -4,6 +4,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAnalytics
 
 class HomeViewDismisser: ObservableObject {
     @Published var isActive: Bool = false
@@ -68,9 +69,9 @@ struct HomeView : View {
         .onAppear {
             UserRepository().setShowOnboardingInfo(showOnboarding: false)
             
-//            Analytics.logEvent(AnalyticsEventScreenView,
-//                               parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
-//                                           AnalyticsParameterScreenClass: "\(HomeView.self)"])
+            Analytics.logEvent(AnalyticsEventScreenView,
+                               parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
+                                           AnalyticsParameterScreenClass: "\(HomeView.self)"])
         }
         .alert("Ooops.. this is not ready yet... \n er... I mean... You don't have access to this right now.", isPresented: $showConfirm) {
             Button("OK", role: .cancel) { }
