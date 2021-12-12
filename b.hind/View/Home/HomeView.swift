@@ -10,8 +10,9 @@ class HomeViewDismisser: ObservableObject {
 }
 
 struct HomeView : View {
-    let size = UIScreen.main.bounds.size
     @EnvironmentObject var dismisser: HomeViewDismisser
+    let size = UIScreen.main.bounds.size
+    @State private var showConfirm = false
     
     var body: some View {
         return ZStack {
@@ -67,18 +68,25 @@ struct HomeView : View {
         .onAppear {
             UserRepository().setShowOnboardingInfo(showOnboarding: false)
             
-            Analytics.logEvent(AnalyticsEventScreenView,
-                               parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
-                                           AnalyticsParameterScreenClass: "\(HomeView.self)"])
+//            Analytics.logEvent(AnalyticsEventScreenView,
+//                               parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
+//                                           AnalyticsParameterScreenClass: "\(HomeView.self)"])
+        }
+        .alert("Ooops.. this is not ready yet... \n er... I mean... You don't have access to this right now.", isPresented: $showConfirm) {
+            Button("OK", role: .cancel) { }
         }
     }
     
     var buildSettings: some View {
-        Image("settings_icon")
-            .frame(width: size.width, alignment: .trailing)
-            .padding(.top, 50)
-            .padding(.bottom, 20)
-            .padding(.trailing, 40)
+        Button(action: {
+            showConfirm = true
+        }) {
+            Image("settings_icon")
+                .frame(width: size.width, alignment: .trailing)
+                .padding(.top, 50)
+                .padding(.bottom, 20)
+                .padding(.trailing, 40)
+        }
     }
     
     var buildHint: some View {
@@ -110,57 +118,37 @@ struct HomeView : View {
         )
     }
     
-    var buildBgoodApp: some View {
-        VStack (alignment: .center) {
-            Image("achievements_icon")
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.width * 0.1, height: size.height * 0.1, alignment: .center)
-            
-            Text("B.Good")
-                .font(.system(size:12))
-                .foregroundColor(.white)
+    func buildIcon(image: String, text: String) -> some View {
+        Button(action: {
+            showConfirm = true
+        }) {
+            VStack (alignment: .center) {
+                Image(image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: size.width * 0.1, height: size.height * 0.1, alignment: .center)
+                
+                Text(text)
+                    .font(.system(size:12))
+                    .foregroundColor(.white)
+            }
         }
+    }
+    
+    var buildBgoodApp: some View {
+        buildIcon(image: "achievements_icon", text: "B.Good")
     }
     
     var buildBOnTimeApp: some View {
-        VStack (alignment: .center) {
-            Image("time_icon")
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.width * 0.1, height: size.height * 0.1, alignment: .center)
-            
-            Text("B.On Time")
-                .font(.system(size:12))
-                .foregroundColor(.white)
-        }
+        buildIcon(image: "time_icon", text: "B.On Time")
     }
     
     var buildBGrimApp: some View {
-        VStack (alignment: .center) {
-            Image("grim_icon")
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.width * 0.1, height: size.height * 0.1, alignment: .center)
-            
-            Text("B.Grim")
-                .font(.system(size:12))
-                .foregroundColor(.white)
-        }
+        buildIcon(image: "grim_icon", text: "B.Grim")
     }
     
     var buildBBankApp: some View {
-        VStack (alignment: .center) {
-            Image("bank_icon")
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.width * 0.1, height: size.height * 0.1, alignment: .center)
-                .padding(.top, 10)
-            
-            Text("B.Bank")
-                .font(.system(size:12))
-                .foregroundColor(.white)
-        }
+        buildIcon(image: "bank_icon", text: "B.Bank")
     }
     
     var buildWidgetApp: some View {
@@ -173,7 +161,7 @@ struct HomeView : View {
     
     var buildBottomApps: some View {
         HStack {
-            NavigationLink(destination: MailView()) {
+            NavigationLink(destination: MessageView()) {
                 Image("message_icon")
                     .resizable()
                     .scaledToFill()
@@ -181,7 +169,7 @@ struct HomeView : View {
                     .padding(.top, 10)
                     .padding(.bottom, 5)
             }
-            NavigationLink(destination: MailView()) {
+            NavigationLink(destination: CallView()) {
                 Image("phone_icon")
                     .resizable()
                     .scaledToFill()

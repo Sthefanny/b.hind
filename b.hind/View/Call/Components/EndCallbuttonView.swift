@@ -23,7 +23,7 @@ struct EndCallbuttonView: View {
                 .clipShape(Circle())}
             
         }
-        .padding(20)
+        .padding(10)
         .disabled(enabled == false)
     }
 }

@@ -26,6 +26,7 @@
 		039FF8A12752AD030071529D /* call3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 039FF8A02752AD030071529D /* call3.m4a */; };
 		3606C3BB61858D46DF54BAE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */; };
 		E50E2650276138CF00C6A3BD /* SkipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E264F276138CF00C6A3BD /* SkipButtonView.swift */; };
+		E54BCBF62763C659000E9E15 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BCBF52763C659000E9E15 /* MessageView.swift */; };
 		E554617D274EA2DD000FFDA6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617C274EA2DD000FFDA6 /* ARDelegate.swift */; };
 		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
 		E57CA3AC2752DE45001DD1BF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CA3AB2752DE45001DD1BF /* UserRepository.swift */; };
@@ -48,6 +49,8 @@
 		E5DDE167275FDF1B00F6E4B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5DDE166275FDF1B00F6E4B3 /* GoogleService-Info.plist */; };
 		E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */; };
 		E5E626B52750652D001FDE96 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E626B42750652D001FDE96 /* FailView.swift */; };
+		E5FDA3E42766499600094937 /* SingleMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDA3E32766499600094937 /* SingleMessageView.swift */; };
+		E5FDA3E6276649DD00094937 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDA3E5276649DD00094937 /* ButtonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,7 @@
 		3606C43ED8BFFBC68C8F6F36 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E50E264F276138CF00C6A3BD /* SkipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButtonView.swift; sourceTree = "<group>"; };
 		E50E3019273EEA9E00CFEC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E54BCBF52763C659000E9E15 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		E554617C274EA2DD000FFDA6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
 		E554617E274EA35A000FFDA6 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
 		E57CA3AB2752DE45001DD1BF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		E5DDE166275FDF1B00F6E4B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5E626B227506515001FDE96 /* CertificateOfAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateOfAchievementView.swift; sourceTree = "<group>"; };
 		E5E626B42750652D001FDE96 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
+		E5FDA3E32766499600094937 /* SingleMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMessageView.swift; sourceTree = "<group>"; };
+		E5FDA3E5276649DD00094937 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,11 +181,13 @@
 		E5269BEA273D9C4B007D0837 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E54BCBF32763C638000E9E15 /* Message */,
 				E5A2AA5F27551C88002C2CF2 /* LaunchScreen */,
 				030987922754157500B01BAB /* Game Over */,
 				0312AAB42746CECC00E8805E /* Call */,
 				E5269BEB273D9DF4007D0837 /* AR */,
 				3606CBB367A15D15352319C9 /* Home */,
+				E58E4C27274BFD9B00B45EB0 /* Mail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +203,16 @@
 				E5E626B42750652D001FDE96 /* FailView.swift */,
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		E54BCBF32763C638000E9E15 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				E54BCBF52763C659000E9E15 /* MessageView.swift */,
+				E5FDA3E32766499600094937 /* SingleMessageView.swift */,
+				E5FDA3E5276649DD00094937 /* ButtonsView.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		E57CA3AA2752DE30001DD1BF /* Repositories */ = {
@@ -259,7 +277,6 @@
 				E57CA3AA2752DE30001DD1BF /* Repositories */,
 				03193A8E275170D90039B492 /* Sounds */,
 				E5269BEA273D9C4B007D0837 /* View */,
-				E58E4C27274BFD9B00B45EB0 /* Mail */,
 				E5DD6344273C592900505CA4 /* bhindApp.swift */,
 				E5DD6348273C592900505CA4 /* Experience.rcproject */,
 				E5DD634A273C592C00505CA4 /* Assets.xcassets */,
@@ -403,12 +420,15 @@
 				E50E2650276138CF00C6A3BD /* SkipButtonView.swift in Sources */,
 				E5DD6347273C592900505CA4 /* MonsterView.swift in Sources */,
 				0312AAB62746CF0600E8805E /* CallView.swift in Sources */,
+				E5FDA3E6276649DD00094937 /* ButtonsView.swift in Sources */,
+				E54BCBF62763C659000E9E15 /* MessageView.swift in Sources */,
 				E5DD6345273C592900505CA4 /* bhindApp.swift in Sources */,
 				03192A0C274EB6D90002BFFE /* WarningView.swift in Sources */,
 				03312C22274C2B2A00C48573 /* CallButtonView.swift in Sources */,
 				030B0838274D77BD00AB6F18 /* AcceptCallButtomView.swift in Sources */,
 				03147DC0274C49A100AD51AD /* EndCallbuttonView.swift in Sources */,
 				030B0834274D767900AB6F18 /* CallingView.swift in Sources */,
+				E5FDA3E42766499600094937 /* SingleMessageView.swift in Sources */,
 				E5C207BB273EF75C00D769C0 /* ARViewRepresentable.swift in Sources */,
 				E5E626B327506515001FDE96 /* CertificateOfAchievementView.swift in Sources */,
 				E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */,
