@@ -10,11 +10,13 @@ import SwiftUI
 
 struct CallView: View {
     @ObservedObject var call = CallManager.instance
+    let size = UIScreen.main.bounds.size
     
     @State var enabled = false
     @State var showAction1 = false
     @State var showAction2 = false
     @State var actualAction: SoundOption = .proposal
+    @State var showMessage = false
     
     var body: some View {
         ZStack (alignment: .center) {
@@ -72,10 +74,24 @@ struct CallView: View {
                     UselessButtonView(buttonImage: "hashtag", sound: .options, enabled: $enabled)
                 }//buttons - fourth line
                 
-                HStack{
+                HStack(){
+                    Spacer()
                     EndCallbuttonView(enabled: $enabled)
+                        
+                    NavigationLink("", destination: MessageView(), isActive: $showMessage)
+                    Button(action: {
+                        call.stopSound()
+                        showMessage = true
+                    }){
+                        Image("message")
+                            .frame(width: 78, height: 78, alignment: .center)
+                            .foregroundColor(enabled ? .white : Color("text_disabled_button"))
+                            .background(enabled ? Color("number_button") : Color("number_disabled_button"))
+                            .clipShape(Circle())
+                    }
                 }
                 .padding()
+                .padding(.trailing, 20)
                 
                 NavigationLink("", destination: HomeView(), isActive: $showAction1)
                 
