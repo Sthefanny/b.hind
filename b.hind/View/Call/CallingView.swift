@@ -37,7 +37,7 @@ struct CallingView: View {
                 Spacer()
 
                 HStack{
-                    EndCallbuttonView()
+                    EndCallbuttonView(enabled: .constant(true))
                         .padding()
                     AcceptCallButtomView()
                         .padding()
