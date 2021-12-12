@@ -15,61 +15,61 @@ struct HomeView : View {
     
     var body: some View {
         return ZStack {
-                Color.black.edgesIgnoringSafeArea(.all)
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+            Image("home_bg")
+                .resizable()
+                .scaledToFill()
+                .frame(width: size.width, height: size.height)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack (alignment: .center) {
+                buildSettings
+                buildHint
                 
-                Image("home_bg")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: size.width, height: size.height)
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack (alignment: .center) {
-                    buildSettings
-                    buildHint
+                HStack (alignment: .top) {
+                    Spacer()
+                    VStack (alignment: .center)  {
+                        buildBgoodApp
+                        buildBBankApp
+                    }
+                    .frame(width: size.width * 0.3, alignment: .trailing)
                     
-                    HStack (alignment: .top) {
-                        Spacer()
-                        VStack (alignment: .center)  {
-                            buildBgoodApp
-                            buildBBankApp
-                        }
-                        .frame(width: size.width * 0.3, alignment: .trailing)
-                        
-                        VStack (alignment: .center) {
-                            HStack {
-                                buildBOnTimeApp
-                                
-                                Spacer()
-                                
-                                buildBGrimApp
-                                
-                            }
-                            buildWidgetApp
+                    VStack (alignment: .center) {
+                        HStack {
+                            buildBOnTimeApp
+                            
+                            Spacer()
+                            
+                            buildBGrimApp
                             
                         }
-                        .frame(width: size.width * 0.5, alignment: .leading)
-                        .padding(.horizontal, 70)
-                        
-                        Spacer()
+                        buildWidgetApp
                         
                     }
-                    .padding(.top, 20)
-                    .frame(width: size.width, alignment: .center)
+                    .frame(width: size.width * 0.5, alignment: .leading)
+                    .padding(.horizontal, 70)
+                    
                     Spacer()
                     
-                    buildBottomApps
                 }
-                .padding(.bottom, 30)
-                .frame(width: size.width, height: size.height, alignment: .top)
-                .edgesIgnoringSafeArea(.all)
-            }
-            .navigationBarHidden(true)
-            .onAppear {
-                UserRepository().setShowOnboardingInfo(showOnboarding: false)
+                .padding(.top, 20)
+                .frame(width: size.width, alignment: .center)
+                Spacer()
                 
-                Analytics.logEvent(AnalyticsEventScreenView,
+                buildBottomApps
+            }
+            .padding(.bottom, 30)
+            .frame(width: size.width, height: size.height, alignment: .top)
+            .edgesIgnoringSafeArea(.all)
+        }
+        .navigationBarHidden(true)
+        .onAppear {
+            UserRepository().setShowOnboardingInfo(showOnboarding: false)
+            
+            Analytics.logEvent(AnalyticsEventScreenView,
                                parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
-                                            AnalyticsParameterScreenClass: "\(HomeView.self)"])
+                                           AnalyticsParameterScreenClass: "\(HomeView.self)"])
         }
     }
     

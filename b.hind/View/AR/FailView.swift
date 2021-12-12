@@ -60,9 +60,7 @@ struct FailView : View {
                         Spacer()
                         
                         Button(action:{
-                            print("isActive == \(dismisser.isActive)")
                             dismisser.isActive = false
-                            print("isActive == \(dismisser.isActive)")
                         }) {
                             Text("Back to Home")
                                 .font(.custom("JosefinSans-Bold", size: 17))

@@ -27,7 +27,6 @@ struct MailView : View {
                 Spacer()
             }
             .frame(width: size.width, height: size.height * 0.85, alignment: .center)
-            .background(Color.red)
             
         }
         .navigationBarTitle("")
