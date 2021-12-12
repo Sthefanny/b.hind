@@ -27,9 +27,9 @@ struct CallButtonView: View {
         } label: {
             Text(number.description)
                 .frame(width: 78, height: 78, alignment: .center)
-                .foregroundColor(.white)
+                .foregroundColor(enabled ? .white : Color("text_disabled_button"))
                 .font(.system(size: 40, weight: .regular))
-                .background(Color(#colorLiteral(red: 0.4144634604, green: 0.4275550246, blue: 0.432397306, alpha: 1)))
+                .background(enabled ? Color("number_button") : Color("number_disabled_button"))
                 .clipShape(Circle())
         }
         .padding(10)
