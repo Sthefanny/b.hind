@@ -78,9 +78,7 @@ struct GameOverVersion1View: View {
                         }
                     }
                     
-                    Button(action: {
-                        self.mode.wrappedValue.dismiss()
-                    }) {
+                    NavigationLink(destination: CallView()) {
                         Text("Go back in time")
                             .font(.custom("JosefinSans-Bold", size: 17))
                             .foregroundColor(.white)

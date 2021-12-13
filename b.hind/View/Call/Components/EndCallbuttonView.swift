@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EndCallbuttonView: View {
+    @Binding var enabled: Bool
     
     var body: some View {
 
@@ -16,19 +17,19 @@ struct EndCallbuttonView: View {
         } label: {
             NavigationLink(destination: CallingView()) {
             Image("no")
+                .foregroundColor(enabled ? .white : Color("text_end_disabled_button"))
                 .frame(width: 78, height: 78, alignment: .center)
-                .background(Color(#colorLiteral(red: 0.8004596829, green: 0.4195397496, blue: 0.2883538306, alpha: 1)))
+                .background(enabled ? Color("end_button") : Color("end_disabled_button"))
                 .clipShape(Circle())}
             
         }
-        .padding(20)
-    
-        
+        .padding(10)
+        .disabled(enabled == false)
     }
 }
 
 struct EndCallbuttonView_Previews: PreviewProvider {
     static var previews: some View {
-        EndCallbuttonView()
+        EndCallbuttonView(enabled: .constant(false))
     }
 }

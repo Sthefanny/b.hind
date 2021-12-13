@@ -10,7 +10,7 @@ import SwiftUI
 import RealityKit
 
 struct ARViewRepresentable: UIViewRepresentable {
-    let arDelegate:ARDelegate
+    @ObservedObject var arDelegate:ARDelegate
 
     func makeUIView(context: Context) -> some UIView {
         let arView = ARView(frame: .zero)

@@ -18,19 +18,24 @@ enum SoundOption: String {
 }
 
 
-class CallManager {
+class CallManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
+    
+    @Published var hasFinished = false
+    
+    var player: AVAudioPlayer?
     
     static let instance = CallManager()
     
-    var player: AVAudioPlayer?
-
     func playSound(sound: SoundOption) {
         stopSound()
         guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: sound == .ringtone ? ".mp3" : ".m4a") else { return }
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
+            player?.delegate = self
+            stopSound()
             player?.play()
+            hasFinished = false
         } catch let error {
             print("Error playing sound. \(error.localizedDescription)")
         }
@@ -39,5 +44,9 @@ class CallManager {
     
     func stopSound() {
         player?.stop()
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        hasFinished = true
     }
 }

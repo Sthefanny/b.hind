@@ -11,23 +11,13 @@ import Firebase
 
 @main
 struct bhindApp: App {
-    let userRepository = UserRepository()
-    
     init() {
         FirebaseApp.configure()
-        userRepository.setShowOnboardingInfo(showOnboarding: true)
     }
     
     var body: some Scene {
         WindowGroup {
-            let showOnboarding = userRepository.getShowOnboardingInfo()
-            
-            if showOnboarding == true {
-                WarningView()
-            } else {
-                HomeView()
-            }
-
+            WarningView()
         }
     }
 }

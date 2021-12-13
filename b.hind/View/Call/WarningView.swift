@@ -7,8 +7,13 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAnalytics
 
 struct WarningView: View {
+    @StateObject var dismisser = HomeViewDismisser()
+    @State var showOnBoarding = false
+    @State var showHome = false
+    let userRepository = UserRepository()
     
     var body: some View {
         
@@ -36,29 +41,53 @@ struct WarningView: View {
                     Text("best played with headphones")
                         .foregroundColor(.white)
                         .font(.custom("JosefinSans-Regular", size: 18))
-                        .padding(40)
+                        .padding(.top, 40)
+                    
+                    Text("Remember to turn your device's volume on")
+                        .foregroundColor(.white)
+                        .font(.custom("JosefinSans-Regular", size: 18))
+                        .padding(.top, 10)
                     
                     Spacer()
                     
+                    Text("Click anywhere to continue")
+                        .foregroundColor(.white)
+                        .font(.custom("JosefinSans-Regular", size: 18))
+                        .padding(.top, 10)
+                    
                 }
-                NavigationLink(destination: CallingView()) {
+                
+                Button(action: {
+                    let showOnboarding = userRepository.getShowOnboardingInfo()
+                    
+                    if showOnboarding {
+                        showOnBoarding = true
+                    } else {
+                        showHome = true
+                    }
+                }) {
                     Rectangle()
                         .foregroundColor(Color.black.opacity(0.01))
                         .navigationBarBackButtonHidden(true)
                         .ignoresSafeArea()
                 }
+                
+                NavigationLink("", destination: CallingView(), isActive: $showOnBoarding)
+                NavigationLink("", destination: HomeView(), isActive: $showHome)
             }
             .navigationBarBackButtonHidden(true)
-            
-            
         } //navigationview
-//        .onAppear() {
-//            Analytics.logEvent(AnalyticsEventScreenView,
-//                           parameters: [AnalyticsParameterScreenName: "\(WarningView.self)",
-//                                        AnalyticsParameterScreenClass: "\(WarningView.self)"])
-//        }
+        .onAppear() {
+//            userRepository.setShowOnboardingInfo(showOnboarding: true)
+            
+            Analytics.logEvent(AnalyticsEventScreenView,
+                           parameters: [AnalyticsParameterScreenName: "\(WarningView.self)",
+                                        AnalyticsParameterScreenClass: "\(WarningView.self)"])
+        }
+        .environmentObject(dismisser)
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
+        .navigationViewStyle(.stack)
         
     }
 }
