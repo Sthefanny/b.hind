@@ -72,8 +72,9 @@ struct HomeView : View {
         }
         .navigationBarHidden(true)
         .onAppear {
-            UserRepository().setShowOnboardingInfo(showOnboarding: false)
-            showTutorial = TutorialRepository().getShowTutorial()
+            UserRepository().setShowOnboardingInfo(showOnboarding: true)
+            let tutorialAlreadyShown = TutorialRepository().getShowTutorial()
+            showTutorial = tutorialAlreadyShown == false
             
             AnalyticsService().setView(name: HomeView.self)
         }

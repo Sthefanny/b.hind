@@ -38,8 +38,9 @@ struct TutorialView: View {
                 actualTutorial += 1
             }
             else {
-                TutorialRepository().setShowTutorial(showTutorial: false)
-                showTutorial = false
+                TutorialRepository().setShowTutorial(showTutorial: true)
+                let tutorialAlreadyShown = TutorialRepository().getShowTutorial()
+                showTutorial = tutorialAlreadyShown == false
             }
         }
         ) {

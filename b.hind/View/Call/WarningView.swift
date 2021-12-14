@@ -11,7 +11,6 @@ struct WarningView: View {
     @StateObject var dismisser = HomeViewDismisser()
     @State var showOnBoarding = false
     @State var showHome = false
-    let userRepository = UserRepository()
     
     var body: some View {
         
@@ -56,9 +55,9 @@ struct WarningView: View {
                 }
                 
                 Button(action: {
-                    let showOnboarding = userRepository.getShowOnboardingInfo()
+                    let onboardingAlreadyShown = UserRepository().getShowOnboardingInfo()
                     
-                    if showOnboarding {
+                    if onboardingAlreadyShown == false {
                         showOnBoarding = true
                     } else {
                         showHome = true

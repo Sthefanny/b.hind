@@ -16,7 +16,6 @@
 		03192A0C274EB6D90002BFFE /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03192A0B274EB6D90002BFFE /* WarningView.swift */; };
 		03192A13274EBFAA0002BFFE /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03192A12274EBFA80002BFFE /* JosefinSans-Bold.ttf */; };
 		03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03192A14274EBFB80002BFFE /* JosefinSans-Regular.ttf */; };
-		03193A90275174480039B492 /* ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 03193A8F275174480039B492 /* ringtone.mp3 */; };
 		03193A9E275296A70039B492 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03193A9D275296A70039B492 /* CallManager.swift */; };
 		03312C22274C2B2A00C48573 /* CallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03312C21274C2B2A00C48573 /* CallButtonView.swift */; };
 		0347992C27628B44007990D7 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0347992B27628B44007990D7 /* TutorialView.swift */; };
@@ -34,6 +33,8 @@
 		E57CA3AC2752DE45001DD1BF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CA3AB2752DE45001DD1BF /* UserRepository.swift */; };
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
 		E58E95002768F82B00737FD6 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E94FF2768F82B00737FD6 /* AnalyticsService.swift */; };
+		E58E9502276908E500737FD6 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E58E9501276908E400737FD6 /* alarm.mp3 */; };
+		E58E9504276916AE00737FD6 /* ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E58E9503276916AE00737FD6 /* ringtone.mp3 */; };
 		E591FD3F2752A99300890041 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E591FD3E2752A99300890041 /* Monster.usdz */; };
 		E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */; };
 		E5A2AA6127551CA0002C2CF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A2AA6027551CA0002C2CF2 /* LaunchScreen.storyboard */; };
@@ -66,7 +67,6 @@
 		03192A0B274EB6D90002BFFE /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		03192A12274EBFA80002BFFE /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
 		03192A14274EBFB80002BFFE /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
-		03193A8F275174480039B492 /* ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ringtone.mp3; sourceTree = "<group>"; };
 		03193A9D275296A70039B492 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		03312C21274C2B2A00C48573 /* CallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallButtonView.swift; sourceTree = "<group>"; };
 		0347992B27628B44007990D7 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
@@ -85,6 +85,8 @@
 		E57CA3AB2752DE45001DD1BF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		E58E94FF2768F82B00737FD6 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		E58E9501276908E400737FD6 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		E58E9503276916AE00737FD6 /* ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ringtone.mp3; path = ../../../../../Downloads/ringtone.mp3; sourceTree = "<group>"; };
 		E591FD3E2752A99300890041 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
 		E5A2AA6027551CA0002C2CF2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,11 +157,12 @@
 			isa = PBXGroup;
 			children = (
 				034799352763DD87007990D7 /* proposal.mp3 */,
+				E58E9501276908E400737FD6 /* alarm.mp3 */,
 				034799332763DD50007990D7 /* options.mp3 */,
 				034799392763E803007990D7 /* call1.mp3 */,
 				034799312763DD0D007990D7 /* call2.mp3 */,
 				0347992F2763DCB8007990D7 /* call3.mp3 */,
-				03193A8F275174480039B492 /* ringtone.mp3 */,
+				E58E9503276916AE00737FD6 /* ringtone.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -383,9 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				034799362763DD88007990D7 /* proposal.mp3 in Resources */,
-				03193A90275174480039B492 /* ringtone.mp3 in Resources */,
+				E58E9502276908E500737FD6 /* alarm.mp3 in Resources */,
 				03192A15274EBFBA0002BFFE /* JosefinSans-Regular.ttf in Resources */,
 				E5DD634E273C592C00505CA4 /* Preview Assets.xcassets in Resources */,
+				E58E9504276916AE00737FD6 /* ringtone.mp3 in Resources */,
 				E5C0706E2751714E0029FC32 /* SpecialElite-Regular.ttf in Resources */,
 				E591FD3F2752A99300890041 /* Monster.usdz in Resources */,
 				E5C0706C27516B950029FC32 /* JosefinSans-SemiBold.ttf in Resources */,
@@ -589,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"b.hind/Preview Content\"";
 				DEVELOPMENT_TEAM = H7R4J57657;
@@ -628,7 +632,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"b.hind/Preview Content\"";
 				DEVELOPMENT_TEAM = H7R4J57657;
 				ENABLE_PREVIEWS = YES;

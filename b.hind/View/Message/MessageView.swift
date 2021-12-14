@@ -214,7 +214,7 @@ struct MessageView: View {
     var _buildContinueButton: some View {
         HStack {
             Button(action: {
-                UserRepository().setShowOnboardingInfo(showOnboarding: false)
+                UserRepository().setShowOnboardingInfo(showOnboarding: true)
                 
                 if accepted {
                     showHome = true
