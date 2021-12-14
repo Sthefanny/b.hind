@@ -12,9 +12,7 @@ struct EndCallbuttonView: View {
     
     var body: some View {
 
-        Button {
-            print("Call ended")
-        } label: {
+        Button {} label: {
             NavigationLink(destination: CallingView()) {
             Image("no")
                 .foregroundColor(enabled ? .white : Color("text_end_disabled_button"))

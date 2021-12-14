@@ -16,7 +16,6 @@ struct ButtonsView: View {
         HStack {
             Button(action: {
                 accepted = true
-                print("Accepted")
             }) {
                 Text("1 - ACCEPT")
                     .font(.system(size: 16, weight: .regular))
@@ -29,7 +28,6 @@ struct ButtonsView: View {
             
             Button(action: {
                 declined = true
-                print("Declined")
             }) {
                 Text("2 - DECLINE")
                     .font(.system(size: 16, weight: .regular))

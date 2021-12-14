@@ -9,9 +9,7 @@ import SwiftUI
 
 struct AcceptCallButtomView: View {
     var body: some View {
-        Button {
-            print("Call accepted")
-        } label: {
+        Button {} label: {
             NavigationLink(destination: CallView()) {
             Image("yes")
                 .frame(width: 78, height: 78, alignment: .center)

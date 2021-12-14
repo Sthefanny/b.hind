@@ -44,7 +44,6 @@ struct MonsterView : View {
                 
                 VStack(alignment: .leading) {
                     Button(action: {
-                        print("ar_leave_button")
                         arDelegate.exit()
                         self.mode.wrappedValue.dismiss()
                     }) {
@@ -63,7 +62,6 @@ struct MonsterView : View {
 //                        .frame(width: geo.size.width * 0.3, alignment: .center)
                     
                     Button(action: {
-                        print("ar_power_button")
                         arDelegate.castSpell()
                         powerButtonAnimationAmount = 1
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {

@@ -16,7 +16,6 @@ enum cicleEnum {
 }
 
 class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
-    @Published var message:String = "starting AR"
     @Published var userLife:Int = 3
     @Published var monsterLife:Int = 3
     @Published var cicleState:cicleEnum = .running
@@ -65,12 +64,11 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     
     public func castSpell() {
         if monsterAnchor != nil {
-            message = "spell Casted"
-            
             let distance = DistanceUtils.calculateDistance(first: monsterAnchor!.position, second: cameraPosition)
-            if distance >= 10 && distance >= 50 {
+            
+            if distance > 10 && distance <= 150 {
                 takeMonsterLife()
-            } else {
+            } else if  distance <= 10{
                 takeUserLife()
             }
         }
@@ -85,9 +83,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
             }
             userLife -= 1
             restartCicle()
-            print("userLife = \(userLife)")
         } else if cicleState == .running && userLife == 1 {
-            print("fail")
             exit()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.isFail = true
@@ -100,9 +96,7 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
             cicleState = .monsterTakingDamage
             monsterLife -= 1
             restartCicle()
-            print("monsterLife = \(monsterLife)")
         } else if cicleState == .running && monsterLife == 1 {
-            print("success")
             exit()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.isSuccess = true
@@ -111,16 +105,14 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     }
     
     func startCicle() {
-//        showSoundForRandomTimes()
-        showMonster()
+        showSoundForRandomTimes()
+//        showMonster()
     }
     
     func restartCicle() {
-        print("stopping")
         stopCicle()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                print("starting")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.startCicle()
         }
     }
@@ -145,16 +137,6 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     }
     
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        print("camera did change \(camera.trackingState)")
-        switch camera.trackingState {
-        case .limited(_):
-            message = "tracking limited"
-        case .normal:
-            message =  "tracking ready"
-        case .notAvailable:
-            message = "cannot track"
-        }
-        
         let cameraTransform = camera.transform
         cameraPosition = SIMD3(
             cameraTransform.columns.3.x,
@@ -174,18 +156,19 @@ class ARDelegate: NSObject, ARSessionDelegate, ObservableObject {
     
     
     func showSoundForRandomTimes() {
-        let quantityToShow = Int.random(in: 3..<6)
+        let quantityToShow = Int.random(in: 1..<5)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             var counter = 1
             
-            self.soundTimer = Timer.scheduledTimer(withTimeInterval: 6, repeats: true) { timer in
+            self.soundTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 if self.soundAnchorIsPlaying == false {
                     if counter < quantityToShow {
                         self.showEmptyAnchor()
                         counter += 1
                     }
                     else {
+                        timer.invalidate()
                         self.showMonster()
                     }
                 }
