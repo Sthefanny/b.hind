@@ -3,8 +3,6 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseAnalytics
 
 class HomeViewDismisser: ObservableObject {
     @Published var isActive: Bool = false
@@ -14,6 +12,7 @@ struct HomeView : View {
     @EnvironmentObject var dismisser: HomeViewDismisser
     let size = UIScreen.main.bounds.size
     @State private var showConfirm = false
+    @State private var showTutorial = false
     
     var body: some View {
         return ZStack {
@@ -73,11 +72,10 @@ struct HomeView : View {
         }
         .navigationBarHidden(true)
         .onAppear {
-            TutorialRepository().setShowTutorial(showTutorial: false)
+            UserRepository().setShowOnboardingInfo(showOnboarding: false)
             showTutorial = TutorialRepository().getShowTutorial()
-            Analytics.logEvent(AnalyticsEventScreenView,
-                               parameters: [AnalyticsParameterScreenName: "\(HomeView.self)",
-                                           AnalyticsParameterScreenClass: "\(HomeView.self)"])
+            
+            AnalyticsService().setView(name: HomeView.self)
         }
         .alert("Ooops.. this is not ready yet... \n er... I mean... You don't have access to this right now.", isPresented: $showConfirm) {
             Button("OK", role: .cancel) { }

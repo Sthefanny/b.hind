@@ -33,6 +33,7 @@
 		E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554617E274EA35A000FFDA6 /* DistanceUtils.swift */; };
 		E57CA3AC2752DE45001DD1BF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CA3AB2752DE45001DD1BF /* UserRepository.swift */; };
 		E58E4C29274BFDB200B45EB0 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E4C28274BFDB200B45EB0 /* MailView.swift */; };
+		E58E95002768F82B00737FD6 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E94FF2768F82B00737FD6 /* AnalyticsService.swift */; };
 		E591FD3F2752A99300890041 /* Monster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E591FD3E2752A99300890041 /* Monster.usdz */; };
 		E598E2C527515E1D00103858 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */; };
 		E5A2AA6127551CA0002C2CF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A2AA6027551CA0002C2CF2 /* LaunchScreen.storyboard */; };
@@ -83,6 +84,7 @@
 		E554617E274EA35A000FFDA6 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
 		E57CA3AB2752DE45001DD1BF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		E58E4C28274BFDB200B45EB0 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		E58E94FF2768F82B00737FD6 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		E591FD3E2752A99300890041 /* Monster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Monster.usdz; sourceTree = "<group>"; };
 		E598E2C427515E1D00103858 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
 		E5A2AA6027551CA0002C2CF2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 			path = Mail;
 			sourceTree = "<group>";
 		};
+		E58E94FE2768F80F00737FD6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E58E94FF2768F82B00737FD6 /* AnalyticsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E5A2AA5F27551C88002C2CF2 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +290,7 @@
 		E5DD6343273C592900505CA4 /* b.hind */ = {
 			isa = PBXGroup;
 			children = (
+				E58E94FE2768F80F00737FD6 /* Services */,
 				E57CA3AA2752DE30001DD1BF /* Repositories */,
 				03193A8E275170D90039B492 /* Sounds */,
 				E5269BEA273D9C4B007D0837 /* View */,
@@ -440,6 +451,7 @@
 				E5DD6349273C592900505CA4 /* Experience.rcproject in Sources */,
 				03098794275415C900B01BAB /* GameOverVersion1View.swift in Sources */,
 				E554617F274EA35A000FFDA6 /* DistanceUtils.swift in Sources */,
+				E58E95002768F82B00737FD6 /* AnalyticsService.swift in Sources */,
 				0347992E2763D1DA007990D7 /* TutorialRepository.swift in Sources */,
 				03193A9E275296A70039B492 /* CallManager.swift in Sources */,
 				0347992C27628B44007990D7 /* TutorialView.swift in Sources */,

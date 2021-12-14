@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseAnalytics
 
 struct WarningView: View {
     @StateObject var dismisser = HomeViewDismisser()
@@ -78,11 +76,7 @@ struct WarningView: View {
             .navigationBarBackButtonHidden(true)
         } //navigationview
         .onAppear() {
-//            userRepository.setShowOnboardingInfo(showOnboarding: true)
-            
-            Analytics.logEvent(AnalyticsEventScreenView,
-                           parameters: [AnalyticsParameterScreenName: "\(WarningView.self)",
-                                        AnalyticsParameterScreenClass: "\(WarningView.self)"])
+            AnalyticsService().setView(name: WarningView.self)
         }
         .environmentObject(dismisser)
         .navigationBarBackButtonHidden(true)

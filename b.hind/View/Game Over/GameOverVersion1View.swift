@@ -97,6 +97,9 @@ struct GameOverVersion1View: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
         .frame(width: UIScreen.main.bounds.size.width * 1, height: UIScreen.main.bounds.size.height * 1, alignment: .center)
+        .onAppear{
+            AnalyticsService().setView(name: GameOverVersion1View.self)
+        }
 
     }
 }
