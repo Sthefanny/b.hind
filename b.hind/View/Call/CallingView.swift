@@ -54,6 +54,7 @@ struct CallingView: View {
         .navigationBarItems(trailing: SkipButtonView())
         .onAppear {
             CallManager.instance.playSound(sound: .ringtone)
+            AnalyticsService().setView(name: CallingView.self)
         }
     }
 }

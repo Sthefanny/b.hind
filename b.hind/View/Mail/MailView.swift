@@ -31,6 +31,9 @@ struct MailView : View {
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)
+        .onAppear {
+            AnalyticsService().setView(name: MailView.self)
+        }
     }
     
     var buildAppBar: some View {

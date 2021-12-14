@@ -108,6 +108,8 @@ struct CallView: View {
             call.playSound(sound: .proposal)
             
             actionListener()
+            
+            AnalyticsService().setView(name: CallView.self)
         }
         //main Zstack
     }

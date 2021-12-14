@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseAnalytics
 
 struct MessageView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
@@ -87,13 +85,9 @@ struct MessageView: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .onAppear {
-            UserRepository().setShowOnboardingInfo(showOnboarding: false)
-            
             showContentByTime()
             
-            Analytics.logEvent(AnalyticsEventScreenView,
-                           parameters: [AnalyticsParameterScreenName: "\(MessageView.self)",
-                                        AnalyticsParameterScreenClass: "\(MessageView.self)"])
+            AnalyticsService().setView(name: MessageView.self)
         }
     }
     
@@ -220,6 +214,8 @@ struct MessageView: View {
     var _buildContinueButton: some View {
         HStack {
             Button(action: {
+                UserRepository().setShowOnboardingInfo(showOnboarding: false)
+                
                 if accepted {
                     showHome = true
                 } else if declined {
