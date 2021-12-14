@@ -91,7 +91,7 @@ struct CallView: View {
                     }
                 }
                 .padding()
-                .padding(.trailing, 20)
+                .padding(.trailing, 35)
                 
                 NavigationLink("", destination: HomeView(), isActive: $showAction1)
                 

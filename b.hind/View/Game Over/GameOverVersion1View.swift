@@ -48,6 +48,7 @@ struct GameOverVersion1View: View {
                             Text("6 months before today our headline was about the same subject and we were clueless of so many things. Humanity's last hope was selfish enough to abandon us, and there was nothing we could do.\n\nToday we still have so many questions, but one thing we know for sure: the day of our ruin has arrived!\n\nSupernatural beings have managed to enter our reality, no one can stop them anymore! Without B.Witched’s tools we’re doomed.")
                                 .font(.custom("JosefinSans-Regular", size: 18))
                                 .multilineTextAlignment(.leading)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .foregroundColor(.black)
                                 .padding(.leading, 20)
                                 .padding(.top, 0)
@@ -57,13 +58,14 @@ struct GameOverVersion1View: View {
                             Image("photo_journal")
                                 .padding(.trailing, 20)
                                 .padding(.top, 0)
-                            Text("HUMANITY IS OVER, AND IT'S YOUR FAULT.")
+                            Text("\"HUMANITY IS OVER, AND IT'S YOUR FAULT.\"")
                                 .font(.custom("JosefinSans-Bold", size: 17))
                                 .multilineTextAlignment(.leading)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .foregroundColor(.black)
                                 .padding(.trailing, 20)
                                 
-                            Text(".your mother")
+                            Text("- your mother")
                                 .font(.custom("JosefinSans-Regular", size: 12))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.black)
@@ -72,6 +74,7 @@ struct GameOverVersion1View: View {
                             Text("Pope John XXIII made a statement at the Vatican “No one can save us anymore, if only we could go back in time.")
                                 .font(.custom("JosefinSans-Regular", size: 17))
                                 .multilineTextAlignment(.leading)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .foregroundColor(.black)
                                 .padding(.trailing, 20)
                             Spacer()
@@ -96,7 +99,7 @@ struct GameOverVersion1View: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
-        .frame(width: UIScreen.main.bounds.size.width * 1, height: UIScreen.main.bounds.size.height * 1, alignment: .center)
+        .frame(width: UIScreen.main.bounds.size.width * 1, height: UIScreen.main.bounds.size.height * 0.97, alignment: .center)
         .onAppear{
             AnalyticsService().setView(name: GameOverVersion1View.self)
         }

@@ -31,60 +31,131 @@ struct CertificateOfAchievementView : View {
                                 .frame(width: geo.size.width, height: geo.size.height * 0.1, alignment: .center)
                                 .padding(.top, 20)
                             
-                            Text("We congratulate _______________ on succesfully capturing the creature _______________ without dying or suffering any irreparable harm!")
+                            HStack {
+                                Text("We congratulate")
+                                    .font(.custom("JosefinSans-Regular", size: 12))
+                                    .lineSpacing(10)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
+                                
+                                Text("(employee name here)")
+                                    .font(.custom("SpecialElite-Regular", size: 10))
+                                    .foregroundColor(.black)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .overlay(
+                                        GeometryReader { geo in
+                                            Path { path in
+                                                path.move(to: CGPoint(x: -2, y: geo.size.height))
+                                                path.addLine(to: CGPoint(x: geo.size.width + 2, y: geo.size.height))
+                                            }
+                                            .stroke(style: StrokeStyle(lineWidth: 0.7, dash: [5, 3])) // adjust to your liking
+                                            .foregroundColor(.black)
+                                            .padding(.top, 3)
+                                        }
+                                    )
+                                
+                                Text("on succesfully")
+                                    .font(.custom("JosefinSans-Regular", size: 12))
+                                    .lineLimit(5)
+                                    .lineSpacing(10)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
+                            }
+                            .padding(.top)
+                            .padding(.bottom, 2)
+                            .frame(width: geo.size.width * 0.85, alignment: .top)
+                            
+                            HStack {
+                                Text("capturing the creature")
+                                    .font(.custom("JosefinSans-Regular", size: 12))
+                                    .lineLimit(5)
+                                    .lineSpacing(10)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
+                                
+                                Text("shade")
+                                    .font(.custom("SpecialElite-Regular", size: 10))
+                                    .foregroundColor(.black)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .overlay(
+                                        GeometryReader { geo in
+                                            Path { path in
+                                                path.move(to: CGPoint(x: -40, y: geo.size.height))
+                                                path.addLine(to: CGPoint(x: geo.size.width + 40, y: geo.size.height))
+                                            }
+                                            .stroke(style: StrokeStyle(lineWidth: 0.7, dash: [5, 3])) // adjust to your liking
+                                            .foregroundColor(.black)
+                                            .padding(.top, 3)
+                                        }
+                                    )
+                                    .frame(width: geo.size.width * 0.26)
+                                
+                                Text("without")
+                                    .font(.custom("JosefinSans-Regular", size: 12))
+                                    .lineLimit(5)
+                                    .lineSpacing(10)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
+                            }
+                            .padding(.bottom, 3)
+                            .padding(.top, 0)
+                            .frame(width: geo.size.width * 0.85, alignment: .top)
+                            
+                            Text("dying or suffering any irreparable harm!")
                                 .font(.custom("JosefinSans-Regular", size: 12))
                                 .lineLimit(5)
                                 .lineSpacing(10)
+                                .fixedSize(horizontal: true, vertical: false)
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
-                                .padding()
-                                .frame(width: geo.size.width * 0.85, alignment: .top)
+                                .padding(.bottom)
+                            
                             
                             Image("b.witched_logo")
                             
                             Image("ar_certificate_stamp")
                                 .frame(width: geo.size.width * 0.88, alignment: .trailing)
-                                .padding(.top, -20)
+                                .padding(.top, -10)
+                            
+                            HStack {
+                                HStack {
+                                    Text("©")
+                                        .font(.custom("JosefinSans-Regular", size: 20))
+                                        .foregroundColor(.black.opacity(0.4))
+                                        .padding(.horizontal, 0)
+                                    
+                                    Text("1430")
+                                        .font(.custom("JosefinSans-Regular", size: 11))
+                                        .foregroundColor(.black.opacity(0.4))
+                                        .padding(.horizontal, 0)
+                                        .padding(.leading, -5)
+                                        .padding(.top, -2)
+                                }
+                                
+                                Spacer()
+                                
+                                Text("B.WITCHED INC.")
+                                    .font(.custom("JosefinSans-Regular", size: 11))
+                                    .foregroundColor(.black.opacity(0.4))
+                                
+                                Spacer()
+                                
+                                Text("MADE IN BR")
+                                    .font(.custom("JosefinSans-Regular", size: 8))
+                                    .foregroundColor(.black.opacity(0.4))
+                                    .padding(.trailing, 10)
+                            }
+                            .padding(.top, -30)
+                            .frame(width: geo.size.width * 0.78, alignment: .center)
                             
                         }
                         .background(
                             Image("ar_certificate")
                         )
-                        
-                        Text("(employee name here)")
-                            .font(.custom("SpecialElite-Regular", size: 10))
-                            .foregroundColor(.black)
-                            .padding(.top, -72)
-                            .padding(.leading, 17)
-                        
-                        Text("shade")
-                            .font(.custom("SpecialElite-Regular", size: 10))
-                            .foregroundColor(.black)
-                            .padding(.top, -48)
-                            .padding(.leading, 80)
-                        
-                        Text("©")
-                            .font(.custom("JosefinSans-Regular", size: 20))
-                            .foregroundColor(.black.opacity(0.4))
-                            .padding(.leading, 40)
-                            .frame(width: geo.size.width, height: geo.size.height * 0.46, alignment: .bottomLeading)
-                        
-                        Text("1430")
-                            .font(.custom("JosefinSans-Regular", size: 11))
-                            .foregroundColor(.black.opacity(0.4))
-                            .padding(.leading, 60)
-                            .frame(width: geo.size.width, height: geo.size.height * 0.45, alignment: .bottomLeading)
-                        
-                        Text("B.WITCHED INC.")
-                            .font(.custom("JosefinSans-Regular", size: 11))
-                            .foregroundColor(.black.opacity(0.4))
-                            .frame(width: geo.size.width, height: geo.size.height * 0.45, alignment: .bottom)
-                        
-                        Text("MADE IN BR")
-                            .font(.custom("JosefinSans-Regular", size: 11))
-                            .foregroundColor(.black.opacity(0.4))
-                            .padding(.trailing, 50)
-                            .frame(width: geo.size.width, height: geo.size.height * 0.45, alignment: .bottomTrailing)
                     }
                     
                     NavigationLink(destination: HomeView()) {
